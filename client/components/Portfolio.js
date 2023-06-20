@@ -3,7 +3,7 @@ const Portfolio = ()=>{
 
   return(
 <div id="Portfolio">
-Portfolio
+<h1>Portfolio</h1>
 </div>
 )
 }
