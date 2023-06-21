@@ -1,15 +1,14 @@
 import React from "react";
-
+import BarIcon from "./BarIcon";
 const NavBar = ()=>{
 
   return(
-<section id="NavBar" className="sticky place-content-around">
-    <a>Knowledge</a>
-    <a>About</a>
-    <a>Portfolio</a>
-    <a >Contact Me</a>
-
-    <a className="float-right">Resume</a>
+<section id="NavBar" className="fixed top-0 left-0 h-screen w-16 m-0 flex flex-col bg-zinc-700 text-white shadow">
+    <i>Knowledge</i>
+    <i>About</i>
+    <i>Portfolio</i>
+    <i >Contact Me</i>
+    <i>Resume</i>
 </section>
 )
 }
