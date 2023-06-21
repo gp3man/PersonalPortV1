@@ -19,7 +19,7 @@ const ContactForm = ()=>{
   const [message, setMessage] = useState("Message Or Friendly Project Idea");
 
   return(
-  <div id="contactForm">
+  <section id="contactForm">
     <h1>Contact Me</h1>
     <small>If you made it this far, Let's get Connected!</small>
 
@@ -43,7 +43,7 @@ const ContactForm = ()=>{
         <input type="submit" value="Full-Send!"/>
       </div>
     </form>
-  </div>
+  </section>
   )
 }
 

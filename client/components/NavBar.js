@@ -3,14 +3,14 @@ import React from "react";
 const NavBar = ()=>{
 
   return(
-<div id="NavBar">
+<section id="NavBar" className="sticky place-content-around">
     <a>Knowledge</a>
     <a>About</a>
     <a>Portfolio</a>
-    <a>Contact Me</a>
+    <a >Contact Me</a>
 
-    <a>Resume</a>
-</div>
+    <a className="float-right">Resume</a>
+</section>
 )
 }
 export default NavBar;

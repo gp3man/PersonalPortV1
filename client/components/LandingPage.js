@@ -8,14 +8,14 @@ import StartPage from "./StartPage";
 const LandingPage = ()=>{
 
 return(
-  <div id="LandingPage">
+  <section id="LandingPage">
     <NavBar />
     <StartPage />
     <TechStack />
     <AboutMe />
     <Portfolio />
     <ContactForm />
-  </div>
+  </section>
 )
 }
 export default LandingPage;
