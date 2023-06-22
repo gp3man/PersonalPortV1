@@ -3,7 +3,7 @@ import React from "react";
 const BarIcon = ({icon})=>{
 
   return(
-<div className="barIcon">
+<div className="bar-icon">
   {icon}
 </div>
 )

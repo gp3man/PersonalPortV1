@@ -8,13 +8,13 @@ import StartPage from "./StartPage";
 const LandingPage = ()=>{
 
 return(
-  <section id="LandingPage">
+  <section className="ml-24"id="LandingPage">
     <NavBar />
-    <StartPage />
-    <TechStack />
-    <AboutMe />
-    <Portfolio />
-    <ContactForm />
+      <StartPage />
+      <TechStack />
+      <AboutMe />
+      <Portfolio />
+      <ContactForm />
   </section>
 )
 }
