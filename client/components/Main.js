@@ -5,7 +5,7 @@ import ContactForm from "./ContactForm";
 import TechStack from "./TechStack";
 import AboutMe from "./AboutMe";
 import Portfolio from "./Portfolio";
-import StartPage from "./StartPage";
+import StartPage from "./HeroPage";
 import { AnimatePresence, motion, useMotionValue } from "framer-motion";
 const Main = () => {
   const location = useLocation();

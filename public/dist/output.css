@@ -616,6 +616,10 @@ video {
   align-content: space-between;
 }
 
+.content-around {
+  align-content: space-around;
+}
+
 .items-center {
   align-items: center;
 }
@@ -646,6 +650,16 @@ video {
 
 .text-5xl {
   font-size: 3rem;
+  line-height: 1;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-7xl {
+  font-size: 4.5rem;
   line-height: 1;
 }
 

@@ -1,5 +1,6 @@
 import React from "react";
 import BarIcon from "./BarIcon";
+import { motion } from "framer-motion";
 import {
   DiJsBadge,
   DiReact,
@@ -16,6 +17,7 @@ import { SiSequelize, SiInsomnia } from "react-icons/si";
 
 const TechStack = () => {
   return (
+    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
     <section className="flex items-center" id="TechStack">
       <h1>TechStack</h1>
       <div className="flex">
@@ -80,7 +82,7 @@ const TechStack = () => {
           </BarIcon>
         </div>
       </div>
-    </section>
+    </section></motion.div>
   );
 };
 export default TechStack;
