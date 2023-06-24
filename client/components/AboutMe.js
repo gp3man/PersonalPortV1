@@ -1,7 +1,8 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 const AboutMe = () => {
+  const {ref, inView} = useInView
   return (
     <motion.div
       initial={{ opacity: 0 }}

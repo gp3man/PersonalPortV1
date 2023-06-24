@@ -8,5 +8,5 @@ const Portfolio = () => {
     </section>
     </motion.div>
   );
-};f
+};
 export default Portfolio;
