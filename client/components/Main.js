@@ -1,19 +1,31 @@
 import React from "react";
-import { Route, Routes, NavLink } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Four0FourPage from "./Four0FourPage";
-import LandingPage from "./LandingPage";
+import ContactForm from "./ContactForm";
+import TechStack from "./TechStack";
+import AboutMe from "./AboutMe";
+import Portfolio from "./Portfolio";
+import StartPage from "./StartPage";
+import { AnimatePresence, motion, useMotionValue } from "framer-motion";
 const Main = () => {
-
-    return (
-        <>
-            <div id="Main">
-            <Routes>
-                <Route path="*" element={<Four0FourPage />} />
-                <Route path="/" element={<LandingPage />} />
-            </Routes>
-            </div>
-        </>
-    );
+  const location = useLocation();
+  return (
+    <>
+      <div id="Main">
+        <AnimatePresence>
+          <Routes location={location} key={location.pathname}>
+            <Route path="*" element={<Four0FourPage />} />
+            <Route path="/" element={<StartPage />} />
+            <Route path="/Knowledge" element={<TechStack />} />
+            <Route path="/AboutMe" element={<AboutMe />} />
+            <Route path="/Portfolio" element={<Portfolio />} />
+            <Route path="/ContactMe" element={<ContactForm />} />
+            <Route path="/Resume" element={<StartPage />} />
+          </Routes>
+        </AnimatePresence>
+      </div>
+    </>
+  );
 };
 
 export default Main;
