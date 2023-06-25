@@ -17,11 +17,10 @@ import { SiSequelize, SiInsomnia } from "react-icons/si";
 
 const TechStack = () => {
   return (
-    <section className="page flex items-center" id="TechStack">
+    <section className="page flex  content-center items-center" id="TechStack">
       <div>
-        <h1 className="text-2xl text-center">TechStack</h1>
+      Tech Stack
       </div>
-
       <div className="flex content-center">
         <div >
           FrontEnd
