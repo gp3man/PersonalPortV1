@@ -19,12 +19,7 @@ const ContactForm = () => {
   const [message, setMessage] = useState("Message Or Friendly Project Idea");
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <section id="contactForm">
+      <section className="page" id="contactForm">
         <h1>Contact Me</h1>
         <small>If you made it this far, Let's get Connected!</small>
 
@@ -70,7 +65,6 @@ const ContactForm = () => {
           </div>
         </form>
       </section>
-    </motion.div>
   );
 };
 

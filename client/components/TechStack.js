@@ -17,12 +17,15 @@ import { SiSequelize, SiInsomnia } from "react-icons/si";
 
 const TechStack = () => {
   return (
-    <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
-    <section className="flex items-center" id="TechStack">
-      <h1>TechStack</h1>
-      <div className="flex">
-        <div className="columns-2">
+    <section className="page flex items-center" id="TechStack">
+      <div>
+        <h1 className="text-2xl text-center">TechStack</h1>
+      </div>
+
+      <div className="flex content-center">
+        <div >
           FrontEnd
+          <div className="columns-2">
           <BarIcon icon={<DiReact />}>
             <caption>React</caption>{" "}
           </BarIcon>
@@ -37,11 +40,12 @@ const TechStack = () => {
           </BarIcon>
           <BarIcon icon={<TbBrandTailwind />}>
             <caption>TailwindCSS</caption>{" "}
-          </BarIcon>
+          </BarIcon></div>
         </div>
 
-        <div className="columns-2">
+        <div >
           BackEnd
+          <div className="columns-2">
           <BarIcon icon={<BsFiletypeSql />}>
             <caption>SQL</caption>{" "}
           </BarIcon>
@@ -53,11 +57,12 @@ const TechStack = () => {
           </BarIcon>
           <BarIcon icon={<FaJava />}>
             <caption>Java</caption>{" "}
-          </BarIcon>
+          </BarIcon></div>
         </div>
 
-        <div className="columns-2">
+        <div>
           Tools
+          <div className="columns-2">
           <BarIcon icon={<FaGit />}>
             <caption>Git</caption>{" "}
           </BarIcon>
@@ -72,17 +77,18 @@ const TechStack = () => {
           </BarIcon>
           <BarIcon icon={<DiPhotoshop />}>
             <caption>Photoshop Suite</caption>{" "}
-          </BarIcon>
+          </BarIcon></div>
         </div>
 
-        <div className="columns-2">
+        <div>
           Design
+          <div className="columns-1">
           <BarIcon icon={<FaFigma />}>
             <caption>Figma</caption>{" "}
-          </BarIcon>
+          </BarIcon></div>
         </div>
       </div>
-    </section></motion.div>
+    </section>
   );
 };
 export default TechStack;

@@ -4,14 +4,9 @@ import { motion, useInView } from "framer-motion";
 const AboutMe = () => {
   const {ref, inView} = useInView
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <section id="AboutMe">
+      <section className="page" id="AboutMe">
         <h1>AboutMe</h1>
-        {/* <image src="img/Greg.jpg" /> */}
+        <img src="Greg.jpg" />
         <h3>
           Prior to my pivot into the tech industry I was immersed in the ups and
           down of being a retail/warehouse manager. After bumping my head, going
@@ -24,7 +19,6 @@ const AboutMe = () => {
           experience on this floating rock we all share.
         </h3>
       </section>
-    </motion.div>
   );
 };
 export default AboutMe;

@@ -7,12 +7,7 @@ const Four0FourPage = () => {
     Navigate("/");
   };
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <section id="NotFound">
+      <section className="page" id="NotFound">
         <iframe
           allow="fullscreen"
           height="270"
@@ -22,7 +17,6 @@ const Four0FourPage = () => {
         <h1> Sorry, You Shouldn't be here. Let's get you back...</h1>
         <button onClick={Back}>Back To Safety</button>
       </section>
-    </motion.div>
   );
 };
 export default Four0FourPage;
