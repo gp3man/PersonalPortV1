@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BarIcon from "./BarIcon";
-import { motion } from "framer-motion";
+import {  motion, useAnimation} from "framer-motion";
+import { useInView } from 'react-intersection-observer'
 import {
   DiJsBadge,
   DiReact,
@@ -16,9 +17,20 @@ import { TbBrandRedux, TbBrandTailwind } from "react-icons/tb";
 import { SiSequelize, SiInsomnia } from "react-icons/si";
 
 const TechStack = () => {
+  const animation = useAnimation();
+  const {ref, inView}= useInView({threshold: 0.1});
+  useEffect(()=>{
+    console.log('TechPage, inView =', inView)
+    if(inView){
+      animation.start({x:0, transition:{type:"spring", bounce:0.4, duration:3}
+      })
+    }
+    if(!inView){animation.start({x:-300}
+      )}
+  },[inView])
   return (
-    <section className="page flex  content-center items-center" id="TechStack">
-      <div>
+    <motion.section ref={ref} animate={animation} className="page" id="TechStack">
+      <div className="uppercase">
       Tech Stack
       </div>
       <div className="flex content-center">
@@ -87,7 +99,7 @@ const TechStack = () => {
           </BarIcon></div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 export default TechStack;

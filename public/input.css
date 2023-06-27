@@ -4,9 +4,9 @@
 
 @layer components {
   .bar-icon {
-    @apply relative flex items-center justify-center h-12 w-12 mb-2 mx-auto shadow-lg bg-gray-800 text-purple-400;
+    @apply relative flex items-center justify-center align-middle h-12 w-12 mb-2 mx-auto shadow-lg text-purple-400;
   }
   .page{
-    @apply min-h-screen ml-20 content-center text-center
+    @apply flex flex-col min-h-screen ml-20 content-center text-center align-middle items-center
   }
 }

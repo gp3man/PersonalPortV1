@@ -1,12 +1,23 @@
-import React from "react";
-import { motion, useInView } from "framer-motion";
+import React, {useEffect} from "react";
+import {  motion, useAnimation} from "framer-motion";
+import { useInView } from 'react-intersection-observer'
 
 const AboutMe = () => {
-  const {ref, inView} = useInView
+  const animation = useAnimation();
+  const {ref, inView}= useInView({threshold: 0.1});
+  useEffect(()=>{
+    console.log('AboutPage, inView =', inView)
+    if(inView){
+      animation.start({x:0, transition:{type:"spring", bounce:0.4, duration:3}
+      })
+    }
+    if(!inView){animation.start({x:-100}
+      )}
+  },[inView])
   return (
-      <section className="page" id="AboutMe">
-        <h1>AboutMe</h1>
-        <img src="Greg.jpg" />
+      <motion.section ref={ref} animate={animation} className="page" id="AboutMe">
+        <h1 className="uppercase">AboutMe</h1>
+        {/* <img src={Greg}/> */}
         <h3>
           Prior to my pivot into the tech industry I was immersed in the ups and
           down of being a retail/warehouse manager. After bumping my head, going
@@ -18,7 +29,7 @@ const AboutMe = () => {
           path to create technologies that will impact and advance the human
           experience on this floating rock we all share.
         </h3>
-      </section>
+      </motion.section>
   );
 };
 export default AboutMe;

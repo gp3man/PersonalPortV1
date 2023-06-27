@@ -1,12 +1,24 @@
-import React, { useRef } from "react";
+import React, { useEffect } from "react";
 import BarIcon from "./BarIcon";
 import { ImGithub, ImLinkedin } from "react-icons/im";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 const heroPage = () => {
+  const animation = useAnimation();
+  const {ref, inView}= useInView({threshold: 0.1});
+  useEffect(()=>{
+    console.log('HeroPage, inView =', inView)
+    if(inView){
+      animation.start({x:0, transition:{type:"spring", bounce:0.4, duration:3}
+      })
+    }
+    if(!inView){animation.start({x:-100}
+      )}
+  },[inView])
   return (
-      <section className="page " id="heroPage">
-        <h1 className="text-7xl">Gregory Pounds</h1>
-        <h2 className="text-5xl"> Software Developer</h2>
+      <motion.section ref={ref} animate={animation} className="page" id="heroPage">
+        <h1 className="text-7xl uppercase">Gregory Pounds</h1>
+        <h2 className="text-5xl uppercase"> Software Developer</h2>
         <div className="flex content-around">
           <BarIcon icon={<ImGithub />}>
             <caption>GitHub</caption>{" "}
@@ -16,7 +28,7 @@ const heroPage = () => {
           </BarIcon>
         </div>
         <button>Contact</button>
-      </section>
+      </motion.section>
   );
 };
 export default heroPage;
