@@ -15,7 +15,7 @@ const Portfolio = () => {
   },[inView])
   return (
     <motion.section ref={ref} animate={animation} className="page" id="Portfolio">
-      <h1 className="uppercase">Portfolio</h1>
+      <h1 className="uppercase text-4xl text-violet-600 m-6">Portfolio</h1>
     </motion.section>
   );
 };

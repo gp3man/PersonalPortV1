@@ -59,7 +59,7 @@ useEffect(()=>{
       className="page"
       id="contactForm"
     >
-      <h1>Contact Me</h1>
+      <h1 className="uppercase text-4xl text-violet-600 m-6">Contact Me</h1>
       <small>Let's get Connected!</small>
       {status && renderAlert()}
       <form className="float-right" onSubmit={onSubmitHandle}>
@@ -100,7 +100,7 @@ useEffect(()=>{
           </label>
         </div>
         <div className="relative mt-12">
-          <input
+          <textarea
           className=" peer m-6 w-[33vw] h-12 border-b-2 border-gray-300 focus: outline-none focus:border-violet-600 placeholder-transparent"
             type="text"
             name="message"

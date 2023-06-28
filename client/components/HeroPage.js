@@ -17,8 +17,8 @@ const heroPage = () => {
   },[inView])
   return (
       <motion.section ref={ref} animate={animation} className="page" id="heroPage">
-        <h1 className="text-7xl uppercase">Gregory Pounds</h1>
-        <h2 className="text-5xl uppercase"> Software Developer</h2>
+        <h1 className="text-7xl uppercase m-6">Gregory Pounds</h1>
+        <h2 className="text-5xl uppercase bg-violet-500 text-slate-100 rounded-full m-6 p-2"> Software Developer</h2>
         <div className="flex content-around">
           <BarIcon icon={<ImGithub />}>
             <caption>GitHub</caption>{" "}
@@ -27,7 +27,7 @@ const heroPage = () => {
             <caption>LinkedIn</caption>{" "}
           </BarIcon>
         </div>
-        <button>Contact</button>
+        <button className="bg-violet-500 text-slate-100 rounded-3xl p-2 hover:bg-rose-400 hover:text-slate-800">Contact</button>
       </motion.section>
   );
 };
