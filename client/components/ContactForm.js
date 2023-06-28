@@ -22,8 +22,8 @@ const ContactForm = () => {
       animation.start({ x: -100 });
     }
   }, [inView]);
-  const Navigate = useNavigate();
-  const onSubmitHandle = async (evt) => {
+  // const Navigate = useNavigate();
+  const onSubmitHandle = (evt) => {
     evt.preventDefault();
     const messagePac = {
       name:fuserName,

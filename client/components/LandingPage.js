@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ContactForm from "./ContactForm";
 import TechStack from "./TechStack";
 import AboutMe from "./AboutMe";

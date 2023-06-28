@@ -1,8 +1,8 @@
 import React, {useEffect} from "react";
 import {  motion, useAnimation} from "framer-motion";
 import { useInView } from 'react-intersection-observer'
-// import Greg from "/public/images/Greg.jpg"
-import img from "../../public/images/IMG_5522.jpg"
+// const Greg = require("../../public/images/greg.jpg")
+// import Greg from "../../public/images/greg.jpg"
 const AboutMe = () => {
   const animation = useAnimation();
   const {ref, inView}= useInView({threshold: 0.1});
@@ -18,7 +18,7 @@ const AboutMe = () => {
   return (
       <motion.section ref={ref} animate={animation} className="page" id="AboutMe">
         <h1 className="uppercase text-4xl text-violet-600 m-6">About Me</h1>
-        <img src={img} alt="profile picture"/>
+        {/* <img src={require("/public/images/greg.jpg")} alt="profile picture"/> */}
         <h3>
           Prior to my pivot into the tech industry I was immersed in the ups and
           down of being a retail/warehouse manager. After bumping my head, going

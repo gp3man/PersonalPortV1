@@ -7,6 +7,7 @@ import {
 } from "react-icons/lu";
 import { SiAboutdotme } from "react-icons/si";
 import { VscProject } from "react-icons/vsc";
+// import resume from "../../public/Resume.pdf"
 import { NavLink } from "react-router-dom";
 const NavBar = () => {
   //
@@ -36,9 +37,11 @@ const NavBar = () => {
         </BarIcon>
       {/* </NavLink> */}
       {/* <NavLink to={"/Resume"}> */}
+      {/* <a download={require("/public/Resume.pdf")}> */}
         <BarIcon className="object-center" icon={<LuDownload />}>
           <caption>Resume</caption>{" "}
         </BarIcon>
+        {/* </a> */}
       {/* </NavLink> */}
     </section>
   );
