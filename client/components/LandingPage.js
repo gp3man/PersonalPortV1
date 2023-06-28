@@ -10,7 +10,7 @@ import BarIcon from "./BarIcon";
 const LandingPage = () => {
   return (
     <>
-      <div id="LandingPage">
+      <div className="snap-y snap-mandatory" id="LandingPage">
         {/* <BarIcon {icon={''}} /> */}
         <StartPage />
         <TechStack />

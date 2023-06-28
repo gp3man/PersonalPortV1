@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useNavigate } from "react-router-dom";
+import {AiFillPhone, AiTwotoneMail} from "react-icons/ai"
+import emailjs from "emailjs-com"
+import BarIcon from "./BarIcon";
+
 
 const ContactForm = () => {
   const animation = useAnimation();
@@ -21,18 +25,33 @@ const ContactForm = () => {
   const Navigate = useNavigate();
   const onSubmitHandle = async (evt) => {
     evt.preventDefault();
-    console.log(userName);
-    setUserName("");
-    console.log(email);
-    setEmail("");
-    console.log(message);
-    setMessage("");
-    Navigate("/");
-  };
-  const [userName, setUserName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+    const messagePac = {
+      name:fuserName,
+      email:femail,
+      message:fmessage
+    }
 
+    emailjs.send("service_jdhxbxu", "template_vf2fmw9", messagePac, "Mv1OyjtGmuow8kg_N")
+      .then(response =>{
+        console.log("SUCCESS!", response)
+        setUserName("");
+        setEmail("");
+        setMessage("");
+        setStatus("SUCCESS")
+      }, error =>{
+        console.log("FAILED!", error)
+      })
+    // Navigate("/");
+  };
+  const [fuserName, setUserName] = useState("");
+  const [femail, setEmail] = useState("");
+  const [fmessage, setMessage] = useState("");
+  const [status, setStatus] = useState("")
+useEffect(()=>{
+  setInterval(() => {
+    setStatus('')
+  }, 15000);
+})
   return (
     <motion.section
       ref={ref}
@@ -41,67 +60,83 @@ const ContactForm = () => {
       id="contactForm"
     >
       <h1>Contact Me</h1>
-      <small>If you made it this far, Let's get Connected!</small>
-
-      <form  onSubmit={onSubmitHandle}>
-        <div className="relative">
+      <small>Let's get Connected!</small>
+      {status && renderAlert()}
+      <form className="float-right" onSubmit={onSubmitHandle}>
+        <div className="relative mt-12">
           <input
-          className="m-6 w-[33vw]"
+          className="peer m-6 w-[33vw] border-b-2 border-gray-300 focus: outline-none focus:border-violet-600 placeholder-transparent"
             type="text"
             name="userName"
             id="userName"
-            value={userName}
+            value={fuserName}
             onChange={(e) => setUserName(e.target.value)}
-            placeholder="Your Name"
+            placeholder="Name"
             required
           />
           <label
-            className="absolute left-0 top-3.5 text-gray-600 text-sm"
+            className="absolute left-3 -top-3 mx-3 text-gray-800 text-sm transition-all peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus: -top-3.5 peer-focus:text-gray-800 peer-focus:text-sm"
             htmlFor="userName"
           >
-            Your Name
+            Name
           </label>
         </div>
-        <div>
+        <div className="relative mt-12">
           <input
-          className="m-6 w-[33vw]"
+          className="peer m-6 w-[33vw] border-b-2 border-gray-300 focus: outline-none focus:border-violet-600 placeholder-transparent"
             type="email"
             name="email"
             id="email"
-            value={email}
+            value={femail}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Your Email"
+            placeholder="Email address"
             required
           />
           <label
-            className="absolute left-0 top-3.5 text-gray-600 text-sm"
+            className="absolute left-3 -top-3 mx-3 text-gray-800 text-sm transition-all peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus: -top-3.5 peer-focus:text-gray-800 peer-focus:text-sm"
             htmlFor="email"
           >
-            Your Email
+            Email address
           </label>
         </div>
-        <div>
+        <div className="relative mt-12">
           <input
-          className="m-6 w-[33vw] h-12"
+          className=" peer m-6 w-[33vw] h-12 border-b-2 border-gray-300 focus: outline-none focus:border-violet-600 placeholder-transparent"
             type="text"
             name="message"
             id="message"
-            value={message}
+            value={fmessage}
             onChange={(e) => setMessage(e.target.value)}
-            placeholder="Message Or Friendly Project Idea"
+            placeholder="Message/Suggestions"
             required
           />
           <label
-            className="absolute left-0 top-3.5 text-gray-600 text-sm"
+            className="absolute left-3 -top-3 mx-3 text-gray-800 text-sm transition-all peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus: -top-3.5 peer-focus:text-gray-800 peer-focus:text-sm"
             htmlFor="message"
           >
-            Message Or Friendly Project Idea
+            Message/Suggestions
           </label>
         </div>
-        <input type="submit" value="Full-Send!" />
+        <input className="bg-violet-500 text-slate-100 rounded-3xl p-2 hover:bg-rose-400 hover:text-slate-800" type="submit" value="Full-Send!" />
       </form>
+      <div className="flex-col mt-8 ">
+        <div className="left-0">
+          <BarIcon icon={<AiFillPhone />} />
+          <p className="text-2xl">224-361-6080</p>
+        </div>
+        <div className="left-0">
+         <BarIcon icon={<AiTwotoneMail />} />
+         <p className="text-2xl">greg.pounds3@outlook.com</p>
+        </div>
+
+      </div>
     </motion.section>
   );
 };
-
+const renderAlert = () =>(
+  <div className="px-4 py-3 leading-normal text-green-700 bg-green-200 rounded-xl mb-5">
+    <p>Your message was sent successfully to Greg!</p>
+  </div>
+)
 export default ContactForm;
+//
