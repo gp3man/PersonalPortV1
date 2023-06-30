@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useNavigate } from "react-router-dom";
 import {AiFillPhone, AiTwotoneMail} from "react-icons/ai"
 import emailjs from "emailjs-com"
 import BarIcon from "./BarIcon";

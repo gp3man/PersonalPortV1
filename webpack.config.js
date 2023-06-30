@@ -5,7 +5,8 @@ module.exports = {
   ],
   output: {
     path: __dirname,
-    filename: './public/bundle.js'
+    filename: './public/bundle.js',
+    assetModuleFilename: '[name][ext]'
   },
   devtool: 'source-map',
   module: {
@@ -29,7 +30,10 @@ module.exports = {
       },
       {
         test: /\.(png|jpeg|gif|pdf|jpg)$/i,
-        type: 'asset/resource'
+        type: 'asset/resource',
+        // generator:{
+        //   filename: 'static/[hash][ext][query]'
+        // }
       }
     ]
   }

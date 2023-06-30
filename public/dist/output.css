@@ -887,6 +887,11 @@ video {
   background-color: rgb(251 113 133 / var(--tw-bg-opacity));
 }
 
+.hover\:text-rose-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(244 63 94 / var(--tw-text-opacity));
+}
+
 .hover\:text-slate-800:hover {
   --tw-text-opacity: 1;
   color: rgb(30 41 59 / var(--tw-text-opacity));
