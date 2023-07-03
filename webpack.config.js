@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: __dirname,
     filename: './public/bundle.js',
-    assetModuleFilename: '[name][ext]'
+    assetModuleFilename: 'assets/[hash][ext]'
   },
   devtool: 'source-map',
   module: {
@@ -29,12 +29,18 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpeg|gif|pdf|jpg)$/i,
+        test: /\.(png|jpg|jpeg|gif|pdf)$/i,
         type: 'asset/resource',
         // generator:{
         //   filename: 'static/[hash][ext][query]'
         // }
       }
     ]
-  }
+  },
+  // plugins:[
+  //   new HtmlWebpackPlugin({
+  //     title: `Gregory's World`,
+  //     filename: 'index.html',
+  //     template: 'public/template.html'
+  //   })]
 }
