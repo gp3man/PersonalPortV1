@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server",
+    "build": "webpack",
     "start-dev": "webpack -w & nodemon server",
     "tail": "tailwindcss -i ./public/input.css -o ./public/dist/output.css --watch"
   },

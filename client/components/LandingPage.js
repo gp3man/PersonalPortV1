@@ -3,7 +3,7 @@ import ContactForm from "./ContactForm";
 import TechStack from "./TechStack";
 import AboutMe from "./AboutMe";
 import Portfolio from "./Portfolio";
-import StartPage from "./HeroPage";
+import HeroPage from "./HeroPage";
 import {MdDarkMode, MdOutlineDarkMode, MdLightMode, MdOutlineLightMode} from "react-icons/md"
 import BarIcon from "./BarIcon";
 
@@ -12,7 +12,7 @@ const LandingPage = () => {
     <>
       <div className="snap-y snap-mandatory" id="LandingPage">
         {/* <BarIcon {icon={''}} /> */}
-        <StartPage />
+        <HeroPage />
         <TechStack />
         <AboutMe />
         <Portfolio />

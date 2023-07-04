@@ -1,5 +1,5 @@
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: [
     './client/index.js'
   ],
@@ -12,7 +12,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        "test": /\.(png|jpg|jpeg|gif|pdf)$/i,
+        "type": 'asset/resource',
+        // generator:{
+        //   filename: 'static/[hash][ext][query]'
+        // }
+      },
+      {
+        test: /\.(js|jsx?)$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
@@ -28,13 +35,6 @@ module.exports = {
           'css-loader',
         ]
       },
-      {
-        test: /\.(png|jpg|jpeg|gif|pdf)$/i,
-        type: 'asset/resource',
-        // generator:{
-        //   filename: 'static/[hash][ext][query]'
-        // }
-      }
     ]
   },
   // plugins:[
