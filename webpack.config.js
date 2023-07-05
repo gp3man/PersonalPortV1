@@ -1,32 +1,33 @@
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: [
-    './client/index.js'
+    './client/index.jsx'
   ],
   output: {
-    path: __dirname,
-    filename: './public/bundle.js',
-    assetModuleFilename: 'assets/[hash][ext]'
+    path: __dirname + '/src',
+    filename: 'bundle.js',
+    assetModuleFilename: 'src/assets/[hash][ext]'
   },
+  context: __dirname,
   devtool: 'source-map',
+  devServer: {
+    static: {
+      directory: __dirname + "/src",
+    },
+  },
   module: {
     rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+      },
       {
         "test": /\.(png|jpg|jpeg|gif|pdf)$/i,
         "type": 'asset/resource',
         // generator:{
         //   filename: 'static/[hash][ext][query]'
         // }
-      },
-      {
-        test: /\.(js|jsx?)$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-        options: {
-          presets: [
-            "@babel/preset-env", "@babel/preset-react"
-          ]
-        }
       },
       {
         test: /\.css$/,

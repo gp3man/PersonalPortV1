@@ -1,9 +1,9 @@
 import React, {useEffect} from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import ProjectCard from "./ProjectCard";
-import M1 from "../../assets/Mr-m1.PNG"
-import Shop1 from "../../assets/Shop-A-Shaq1.PNG"
+import ProjectCard from "./ProjectCard.jsx";
+import M1 from "../../src/assets/Mr-m1.PNG"
+import Shop1 from "../../src/assets/Shop-A-Shaq1.PNG"
 const Portfolio = () => {
   const animation = useAnimation();
   const {ref, inView}= useInView({threshold: 0.3});
@@ -38,7 +38,6 @@ const Portfolio = () => {
         return <ProjectCard data={project} key={project.name}/>
       })}
       </div>
-      <img src= {M1}/>
     </motion.section>
   );
 };

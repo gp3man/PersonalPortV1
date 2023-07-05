@@ -3,7 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import {AiFillPhone, AiTwotoneMail} from "react-icons/ai"
 import emailjs from "emailjs-com"
-import BarIcon from "./BarIcon";
+import BarIcon from "./BarIcon.jsx";
 
 
 const ContactForm = () => {

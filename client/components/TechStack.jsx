@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import BarIcon from "./BarIcon";
+import BarIcon from "./BarIcon.jsx";
 import {  motion, useAnimation} from "framer-motion";
 import { useInView } from 'react-intersection-observer'
 import {
