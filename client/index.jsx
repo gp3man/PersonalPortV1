@@ -6,12 +6,14 @@ import NavBar from './components/NavBar.jsx';
 import { Route, Routes } from "react-router-dom";
 import Four0FourPage from "./components/Four0FourPage.jsx";
 import LandingPage from "./components/LandingPage.jsx";
+import Profile from './components/ProfileSideBar.jsx';
 
 const container = document.getElementById("root")
 const root = createRoot(container)
 root.render(
     <Router>
       <NavBar />
+      <Profile />
       <Routes>
          <Route path="*" element={<Four0FourPage />} />
          <Route path="/" element={<LandingPage />} />
