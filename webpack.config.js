@@ -1,15 +1,13 @@
 module.exports = {
-  mode: 'development',
-  entry: [
-    './client/index.jsx'
-  ],
+  mode: "development",
+  entry: ["./client/index.jsx"],
   output: {
-    path: __dirname + '/src',
-    filename: 'bundle.js',
-    assetModuleFilename: 'src/assets/[hash][ext]'
+    path: __dirname + "/src",
+    filename: "bundle.js",
+    assetModuleFilename: "src/assets/[hash][ext]",
   },
   context: __dirname,
-  devtool: 'source-map',
+  devtool: "source-map",
   devServer: {
     static: {
       directory: __dirname + "/src",
@@ -20,28 +18,16 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
       },
       {
-        "test": /\.(png|jpg|jpeg|gif|pdf)$/i,
-        "type": 'asset/resource',
-        // generator:{
-        //   filename: 'static/[hash][ext][query]'
-        // }
+        test: /\.(png|jpg|jpeg|gif|pdf)$/i,
+        type: "asset/resource",
       },
       {
         test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader',
-        ]
+        use: ["style-loader", "css-loader"],
       },
-    ]
+    ],
   },
-  // plugins:[
-  //   new HtmlWebpackPlugin({
-  //     title: `Gregory's World`,
-  //     filename: 'index.html',
-  //     template: 'public/template.html'
-  //   })]
-}
+};
