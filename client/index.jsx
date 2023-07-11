@@ -11,12 +11,10 @@ import Profile from './components/ProfileSideBar.jsx';
 const container = document.getElementById("root")
 const root = createRoot(container)
 root.render(
-    <Router>
-      <NavBar />
-      <Profile />
-      <Routes>
-         <Route path="*" element={<Four0FourPage />} />
-         <Route path="/" element={<LandingPage />} />
-      </Routes>
-    </Router>
+  <Router>
+    <Routes>
+        <Route path="*" element={<Four0FourPage />} />
+        <Route path="/" element={<LandingPage />} />
+    </Routes>
+  </Router>
 );

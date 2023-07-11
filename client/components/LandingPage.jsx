@@ -3,16 +3,16 @@ import ContactForm from "./ContactForm.jsx";
 import TechStack from "./TechStack.jsx";
 import AboutMe from "./AboutMe.jsx";
 import Portfolio from "./Portfolio.jsx"
-import HeroPage from "./HeroPage.jsx";
-import BarIcon from "./BarIcon.jsx";
+import NavBar from "./NavBar.jsx";
+import Profile from "./ProfileSideBar.jsx";
 
 const LandingPage = () => {
 
   return (
     <>
-      <div className="" id="LandingPage">
-        {/* <BarIcon {icon={''}} /> */}
-        {/* <HeroPage /> */}
+      <div className="dark:bg-slate-900" id="LandingPage">
+        <NavBar />
+        <Profile />
         <TechStack />
         <AboutMe />
         <Portfolio />

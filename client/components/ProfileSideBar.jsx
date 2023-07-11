@@ -11,10 +11,10 @@ const Profile = () => {
     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
   }
   return (
-    <motion.section className="page justify-items-center" id="Profile">
+    <motion.section className="page justify-items-center dark:text-slate-300" id="Profile">
       <img className="w-14 h-14 rounded-full" src={Greg} />
       <h1 className="text-3xl uppercase m-6">Gregory Pounds</h1>
-      <h2 className="text-2xl uppercase bg-violet-500 text-slate-100 rounded-full m-6 p-2">
+      <h2 className="text-2xl uppercase bg-violet-500 dark:bg-violet-700 text-slate-100 rounded-full m-6 p-2">
         {" "}
         Software Developer
       </h2>
@@ -33,7 +33,7 @@ const Profile = () => {
         </a>
       </div>
       <button
-        className="bg-violet-500 text-slate-100 rounded-3xl p-2 hover:bg-rose-400 hover:text-slate-800"
+        className="bg-violet-500 dark:bg-violet-700 text-slate-100 rounded-3xl p-2 hover:bg-rose-400 dark:hover:bg-rose-950 hover:text-slate-800 dark:hover:text-slate-400"
         onClick={handleScroll}
       >
         Contact

@@ -4,9 +4,12 @@
 
 @layer components {
   .bar-icon {
-    @apply relative flex items-center justify-center align-middle h-12 w-12 mb-2 mx-auto shadow-sm pb-6 text-violet-500;
+    @apply relative flex items-center justify-center align-middle h-12 w-12 mb-2 mx-auto shadow-sm pb-6 text-violet-500 dark:text-violet-700;
   }
   .page{
     @apply flex flex-col min-h-screen m-1 pt-16 content-center text-center items-center snap-always snap-center border border-red-900
+  }
+  .display-none{
+    @apply hidden;
   }
 }

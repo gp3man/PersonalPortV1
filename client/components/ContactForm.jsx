@@ -59,12 +59,12 @@ useEffect(()=>{
       id="contactForm"
     >
       <h1 className="uppercase text-4xl text-violet-600 m-6">Contact Me</h1>
-      <small>Let's get Connected!</small>
+      <small className="font-light dark:text-slate-50">Let's get Connected!</small>
       {status && renderAlert()}
-      <form className="float-right" onSubmit={onSubmitHandle}>
+      <form onSubmit={onSubmitHandle}>
         <div className="relative mt-12">
           <input
-          className="peer m-6 w-[33vw] border-b-2 border-gray-300 focus: outline-none focus:border-violet-600 placeholder-transparent"
+          className="peer relative -top-3.5 m-6 w-[33vw] border-b-2 border-slate-900 focus: outline-none focus:border-violet-600 placeholder-transparent"
             type="text"
             name="userName"
             id="userName"
@@ -74,7 +74,7 @@ useEffect(()=>{
             required
           />
           <label
-            className="absolute left-3 -top-3 mx-3 text-gray-800 text-sm transition-all peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus: -top-3.5 peer-focus:text-gray-800 peer-focus:text-sm"
+            className="absolute left-3 -top-3 mx-3 text-gray-800 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-gray-800 dark:peer-focus:text-slate-50 peer-focus:text-sm"
             htmlFor="userName"
           >
             Name
@@ -82,7 +82,7 @@ useEffect(()=>{
         </div>
         <div className="relative mt-12">
           <input
-          className="peer m-6 w-[33vw] border-b-2 border-gray-300 focus: outline-none focus:border-violet-600 placeholder-transparent"
+          className="peer relative -top-3.5 m-6 w-[33vw] border-b-2 border-slate-900 focus:outline-none focus:border-violet-600 placeholder-transparent"
             type="email"
             name="email"
             id="email"
@@ -92,15 +92,15 @@ useEffect(()=>{
             required
           />
           <label
-            className="absolute left-3 -top-3 mx-3 text-gray-800 text-sm transition-all peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus: -top-3.5 peer-focus:text-gray-800 peer-focus:text-sm"
+            className="absolute left-3 -top-3 mx-3 text-gray-800 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-gray-800 dark:peer-focus:text-slate-50 peer-focus:text-sm"
             htmlFor="email"
           >
             Email address
           </label>
         </div>
-        <div className="relative mt-12">
+        <div className="relative mt-12 ">
           <textarea
-          className=" peer m-6 w-[33vw] h-12 border-b-2 border-gray-300 focus: outline-none focus:border-violet-600 placeholder-transparent"
+          className=" peer relative -top-3.5 m-6 w-[33vw] h-12 border-b-2 border-slate-900 focus:outline-none focus:border-violet-600 placeholder-transparent"
             type="text"
             name="message"
             id="message"
@@ -110,15 +110,15 @@ useEffect(()=>{
             required
           />
           <label
-            className="absolute left-3 -top-3 mx-3 text-gray-800 text-sm transition-all peer-placeholder-shown:text-gray-400 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus: -top-3.5 peer-focus:text-gray-800 peer-focus:text-sm"
+            className="absolute left-3 -top-3 mx-3 text-gray-800 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-gray-800 dark:peer-focus:text-slate-50 peer-focus:text-sm"
             htmlFor="message"
           >
             Message/Suggestions
           </label>
         </div>
-        <input className="bg-violet-500 text-slate-100 rounded-3xl p-2 hover:bg-rose-400 hover:text-slate-800" type="submit" value="Full-Send!" />
+        <input className="bg-violet-500 text-slate-100 rounded-3xl p-2 hover:bg-rose-400 hover:text-slate-800 dark:hover:bg-rose-950 dark:hover:text-slate-400" type="submit" value="Full-Send!" />
       </form>
-      <div className="flex-col mt-8 ">
+      <div className="flex-row mt-8 dark:text-slate-50">
         <div className="left-0">
           <BarIcon icon={<AiFillPhone />} />
           <p className="text-2xl">224-361-6080</p>
@@ -127,13 +127,12 @@ useEffect(()=>{
          <BarIcon icon={<AiTwotoneMail />} />
          <p className="text-2xl">greg.pounds3@outlook.com</p>
         </div>
-
       </div>
     </motion.section>
   );
 };
 const renderAlert = () =>(
-  <div className="px-4 py-3 leading-normal text-green-700 bg-green-200 rounded-xl mb-5">
+  <div className="px-4 py-3 leading-normal text-blue-700 bg-blue-200 rounded-xl mb-5">
     <p>Your message was sent successfully to Greg!</p>
   </div>
 )
