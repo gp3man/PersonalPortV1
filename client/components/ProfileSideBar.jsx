@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { ImGithub, ImLinkedin } from "react-icons/im";
 import BarIcon from "./BarIcon.jsx";
-import { useInView } from "react-intersection-observer";
 import Greg from "../../src/assets/greg.jpg";
 const Profile = () => {
   const animation = useAnimation();

@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import {AiFillPhone, AiTwotoneMail} from "react-icons/ai"
 import emailjs from "emailjs-com"
 import BarIcon from "./BarIcon.jsx";
+import Me1 from "../../src/assets/Mymeme1.png"
 
 
 const ContactForm = () => {
@@ -59,12 +60,13 @@ useEffect(()=>{
       id="contactForm"
     >
       <h1 className="uppercase text-4xl text-violet-600 m-6">Contact Me</h1>
-      <small className="font-light dark:text-slate-50">Let's get Connected!</small>
+      <img className="float-right" src={Me1} />
+      <p className="font-light text-lg dark:text-slate-50">Let's get Connected!</p>
       {status && renderAlert()}
       <form onSubmit={onSubmitHandle}>
         <div className="relative mt-12">
           <input
-          className="peer relative -top-3.5 m-6 w-[33vw] border-b-2 border-slate-900 focus: outline-none focus:border-violet-600 placeholder-transparent"
+          className="peer relative -top-3.5 m-6 w-[33vw] border-b-2 border-slate-900 focus: outline-none focus:border-violet-600 dark:focus:border-rose-600 placeholder-transparent"
             type="text"
             name="userName"
             id="userName"
@@ -74,7 +76,7 @@ useEffect(()=>{
             required
           />
           <label
-            className="absolute left-3 -top-3 mx-3 text-gray-800 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-gray-800 dark:peer-focus:text-slate-50 peer-focus:text-sm"
+            className="absolute left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
             htmlFor="userName"
           >
             Name
@@ -82,7 +84,8 @@ useEffect(()=>{
         </div>
         <div className="relative mt-12">
           <input
-          className="peer relative -top-3.5 m-6 w-[33vw] border-b-2 border-slate-900 focus:outline-none focus:border-violet-600 placeholder-transparent"
+          className="peer relative -top-3.5 m-6 w-[33vw] border-b-2 border-slate-900 focus:outline-none focus:border-violet-600
+          dark:focus:border-rose-600 placeholder-transparent"
             type="email"
             name="email"
             id="email"
@@ -92,7 +95,7 @@ useEffect(()=>{
             required
           />
           <label
-            className="absolute left-3 -top-3 mx-3 text-gray-800 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-gray-800 dark:peer-focus:text-slate-50 peer-focus:text-sm"
+            className="absolute left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
             htmlFor="email"
           >
             Email address
@@ -100,7 +103,7 @@ useEffect(()=>{
         </div>
         <div className="relative mt-12 ">
           <textarea
-          className=" peer relative -top-3.5 m-6 w-[33vw] h-12 border-b-2 border-slate-900 focus:outline-none focus:border-violet-600 placeholder-transparent"
+          className=" peer relative -top-3.5 m-6 w-[33vw] h-12 border-b-2 border-slate-900 focus:outline-none focus:border-violet-600 dark:focus:border-rose-600 placeholder-transparent"
             type="text"
             name="message"
             id="message"
@@ -110,7 +113,7 @@ useEffect(()=>{
             required
           />
           <label
-            className="absolute left-3 -top-3 mx-3 text-gray-800 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-gray-800 dark:peer-focus:text-slate-50 peer-focus:text-sm"
+            className="absolute left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
             htmlFor="message"
           >
             Message/Suggestions

@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import {  motion, useAnimation} from "framer-motion";
 import { useInView } from 'react-intersection-observer'
-// import Greg from "../../src/assets/greg.jpg"
+import Greg from "../../src/assets/greg.jpg"
 const AboutMe = () => {
   const animation = useAnimation();
   const {ref, inView}= useInView({threshold: 0.1});
@@ -17,7 +17,7 @@ const AboutMe = () => {
   return (
       <motion.section ref={ref} animate={animation} className="page" id="AboutMe">
         <h1 className="uppercase text-4xl text-violet-600 m-6">About Me</h1>
-        {/* <img className="w-14 h-14 rounded-full" src={Greg}/> */}
+        <img className="w-14 h-14 rounded-full" src={Greg}/>
         <h3 className="dark:text-slate-300">
           Prior to my pivot into the tech industry I was immersed in the ups and
           down of being a retail/warehouse manager. After bumping my head, going
