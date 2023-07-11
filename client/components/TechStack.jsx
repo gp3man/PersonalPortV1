@@ -36,7 +36,7 @@ const TechStack = () => {
       <div className="flex">
         <div>
           FrontEnd
-          <div className="columns-2 p-4 border-2 border-dotted border-x-violet-950">
+          <div className="columns-2 p-4 ">
           <BarIcon icon={<DiReact />}>
             <caption>React</caption>{" "}
           </BarIcon>
@@ -56,7 +56,7 @@ const TechStack = () => {
 
         <div >
           BackEnd
-          <div className="columns-2 p-4 border-2 border-dotted border-x-violet-950">
+          <div className="columns-2 p-4 ">
           <BarIcon icon={<BsFiletypeSql />}>
             <caption>SQL</caption>{" "}
           </BarIcon>
@@ -73,7 +73,7 @@ const TechStack = () => {
 
         <div>
           Tools
-          <div className="columns-2 p-4 border-2 border-dotted border-x-violet-950">
+          <div className="columns-2 p-4 ">
           <BarIcon icon={<FaGit />}>
             <caption>Git</caption>{" "}
           </BarIcon>
@@ -93,7 +93,7 @@ const TechStack = () => {
 
         <div>
           Design
-          <div className="columns-1 p-4 border-2 border-dotted border-x-violet-950">
+          <div className="columns-1 p-4 ">
           <BarIcon icon={<FaFigma />}>
             <caption>Figma</caption>{" "}
           </BarIcon></div>

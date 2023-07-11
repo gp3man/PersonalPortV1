@@ -11,7 +11,7 @@ const Profile = () => {
     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
   }
   return (
-    <motion.section className="page" id="Profile">
+    <motion.section className="page justify-items-center" id="Profile">
       <img className="w-14 h-14 rounded-full" src={Greg} />
       <h1 className="text-3xl uppercase m-6">Gregory Pounds</h1>
       <h2 className="text-2xl uppercase bg-violet-500 text-slate-100 rounded-full m-6 p-2">
