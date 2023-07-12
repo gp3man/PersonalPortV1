@@ -15,10 +15,10 @@ const AboutMe = () => {
       )}
   },[inView])
   return (
-      <motion.section ref={ref} animate={animation} className="page" id="AboutMe">
+      <motion.section ref={ref} animate={animation} className="page px-14" id="AboutMe">
         <h1 className="uppercase text-4xl text-violet-600 m-6">About Me</h1>
-        <img className="w-14 h-14 rounded-full" src={Greg}/>
-        <h3 className="dark:text-slate-300">
+        <img className="w-24 h-24 rounded-full" src={Greg}/>
+        <h3 className="dark:text-slate-300 flex-wrap">
           Prior to my pivot into the tech industry I was immersed in the ups and
           down of being a retail/warehouse manager. After bumping my head, going
           full speed trying to make a living by climbing ladders, I took a hard

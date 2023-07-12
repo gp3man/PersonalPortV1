@@ -33,7 +33,7 @@ const TechStack = () => {
       <div className="uppercase text-4xl text-violet-600 m-6">
       Tech Stack
       </div>
-      <div className="flex">
+      <div className="flex dark:text-slate-50">
         <div>
           FrontEnd
           <div className="columns-2 p-4 ">
@@ -87,7 +87,7 @@ const TechStack = () => {
             <caption>Insomnia</caption>{" "}
           </BarIcon>
           <BarIcon icon={<DiPhotoshop />}>
-            <caption>Photoshop Suite</caption>{" "}
+            <caption>PhotoShop Suite</caption>{" "}
           </BarIcon></div>
         </div>
 
