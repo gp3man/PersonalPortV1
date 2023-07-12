@@ -609,6 +609,10 @@ video {
   text-align: center;
 }
 
+.display-none {
+  display: none;
+}
+
 .fixed {
   position: fixed;
 }

@@ -41,12 +41,10 @@ const NavBar = () => {
         </a>
         <a className="moon px-3 cursor-crosshair">
           <BarIcon icon={<MdDarkMode />}>
-            <caption>Dark Mode</caption>
           </BarIcon>
         </a>
         <a className="sun hidden px-3 cursor-crosshair">
           <BarIcon icon={<MdLightMode />}>
-            <caption>Light Mode</caption>
           </BarIcon>
         </a>
       </div>

@@ -1,9 +1,9 @@
 import React from "react";
 
-const BarIcon = ({ icon, sponsor }) => {
+const BarIcon = (icon) => {
   return(
     <div className="bar-icon peer">{icon}
-    <small className="hidden peer-hover:visible">{sponsor}</small>
+    {/* <small className="hidden peer-hover:visible">{sponsor}</small> */}
   </div>
   )
 };
