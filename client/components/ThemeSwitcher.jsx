@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 const ThemeController = ({initTheme}) => {
-  const [theme, setTheme] = useState(initTheme);
+  const [theme, setTheme] = useState('');
   const userTheme = localStorage.getItem("theme");
   console.log(userTheme)
   const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -49,7 +49,7 @@ const ThemeController = ({initTheme}) => {
       toggleMoon()
     },[theme])
     return (
-      <div onClick={(evt)=>handleClick(evt)} className={`bar-icon ${moonTheme}`}>
+      <div onClick={(evt)=>handleClick(evt)} className={`bar-icon visible dark:hidden`}>
         <MdDarkMode />
       </div>
     );
@@ -68,7 +68,7 @@ const ThemeController = ({initTheme}) => {
       toggleSun()
     },[theme])
     return (
-      <div onClick={(evt)=>handleClick(evt)} className={`bar-icon ${sunTheme}`}>
+      <div onClick={(evt)=>handleClick(evt)} className={`bar-icon hidden dark:visible`}>
         <MdLightMode />
       </div>
     );
@@ -77,8 +77,8 @@ const ThemeController = ({initTheme}) => {
   themeCheck
   return (
     <div>
-      <SunIcon setSun={'hidden'}/>
-      <MoonIcon setMoon={''}/>
+      <SunIcon />
+      <MoonIcon />
     </div>
   );
 };

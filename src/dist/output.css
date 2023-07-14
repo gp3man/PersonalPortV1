@@ -609,6 +609,10 @@ video {
   text-align: center;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .fixed {
   position: fixed;
 }
@@ -1166,6 +1170,14 @@ video {
 .peer:focus ~ .peer-focus\:text-slate-950 {
   --tw-text-opacity: 1;
   color: rgb(2 6 23 / var(--tw-text-opacity));
+}
+
+:is(.dark .dark\:visible) {
+  visibility: visible;
+}
+
+:is(.dark .dark\:hidden) {
+  display: none;
 }
 
 :is(.dark .dark\:border-violet-300) {
