@@ -35,7 +35,7 @@ const NavBar = () => {
           href={resume}
           download="GregoryPounds_Resume"
         >
-          <BarIcon icon={<LuDownload />} sponsor={"Resume"}>
+          <BarIcon icon={<LuDownload />}>
             <caption>Resume</caption>
           </BarIcon>
         </a>
