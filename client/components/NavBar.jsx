@@ -7,6 +7,7 @@ import {
 } from "react-icons/md";
 import resume from "../../src/assets/Resume.pdf";
 import { NavLink } from "react-router-dom";
+import ThemeSwitch from "./ThemeSwitcher.jsx";
 const NavBar = () => {
   //
   return (
@@ -39,14 +40,15 @@ const NavBar = () => {
             <caption>Resume</caption>
           </BarIcon>
         </a>
-        <a className="moon px-3 cursor-crosshair">
+        {/* <a className="moon px-3 cursor-crosshair">
           <BarIcon icon={<MdDarkMode />}>
           </BarIcon>
         </a>
         <a className="sun hidden px-3 cursor-crosshair">
           <BarIcon icon={<MdLightMode />}>
           </BarIcon>
-        </a>
+        </a> */}
+        <ThemeSwitch initTheme={'light'}/>
       </div>
     </section>
   );
