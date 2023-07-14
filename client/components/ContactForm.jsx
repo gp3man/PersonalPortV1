@@ -59,73 +59,75 @@ return (
     id="contactForm"
   >
     <h1 className="uppercase text-4xl text-violet-600 m-6">Contact Me</h1>
-    <img className="float-right" src={Me1} />
-    <p className="font-light pt-12 text-lg dark:text-slate-50">Let's get Connected!</p>
+    <img className="w-1/4 h-1/4 " src={Me1} />
+    <p className="font-light pt-8 text-lg dark:text-slate-50 pb-5">Let's get Connected!</p>
     {status && renderAlert()}
-    <form onSubmit={onSubmitHandle}>
-      <div className="relative mt-12">
-        <input
-        className="peer relative -top-3.5 m-6 w-[33vw] rounded-md border-b-2 border-slate-900 focus: outline-none focus:border-violet-600 dark:focus:border-blue-600 placeholder-transparent"
-          type="text"
-          name="userName"
-          id="userName"
-          value={fuserName}
-          onChange={(e) => setUserName(e.target.value)}
-          placeholder="Name"
-          required
-        />
-        <label
-          className="absolute left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
-          htmlFor="userName"
-        >
-          Name
-        </label>
-      </div>
-      <div className="relative">
-        <input
-        className="peer relative -top-3.5 m-6 w-[33vw] rounded-md border-b-2 border-slate-900 focus:outline-none focus:border-violet-600
-        dark:focus:border-blue-600 placeholder-transparent"
-          type="email"
-          name="email"
-          id="email"
-          value={femail}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email address"
-          required
-        />
-        <label
-          className="absolute left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
-          htmlFor="email"
-        >
-          Email address
-        </label>
-      </div>
-      <div className="relative">
-        <textarea
-        className="peer relative -top-3.5 m-6 w-[33vw] h-12 rounded-md border-b-2 border-slate-900 focus:outline-none focus:border-violet-600 dark:focus:border-blue-600 placeholder-transparent"
-          type="text"
-          name="message"
-          id="message"
-          value={fmessage}
-          onChange={(e) => setMessage(e.target.value)}
-          placeholder="Message/Suggestions"
-          required
-        />
-        <label
-          className="absolute left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
-          htmlFor="message"
-        >
-          Message/Suggestions
-        </label>
-      </div>
-      <input className="bg-violet-500 text-slate-100 rounded-3xl p-2 hover:bg-blue-500 hover:text-slate-50 dark:hover:bg-blue-700 dark:hover:text-slate-50" type="submit" value="Full-Send!" />
-    </form>
-    <div className="flex-row justify-between mt-8 dark:text-slate-50">
-      <div>
+    <div className="shadow-md shadow-violet-500 pb-7">
+      <form onSubmit={onSubmitHandle}>
+        <div className="relative mt-12">
+          <input
+          className="peer relative -top-3.5 m-6 w-[33vw] rounded-md border-b-2 border-slate-900 focus: outline-none focus:border-violet-600 dark:focus:border-blue-600 placeholder-transparent"
+            type="text"
+            name="userName"
+            id="userName"
+            value={fuserName}
+            onChange={(e) => setUserName(e.target.value)}
+            placeholder="Name"
+            required
+          />
+          <label
+            className="absolute left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
+            htmlFor="userName"
+          >
+            Name
+          </label>
+        </div>
+        <div className="relative">
+          <input
+          className="peer relative -top-3.5 m-6 w-[33vw] rounded-md border-b-2 border-slate-900 focus:outline-none focus:border-violet-600
+          dark:focus:border-blue-600 placeholder-transparent"
+            type="email"
+            name="email"
+            id="email"
+            value={femail}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email address"
+            required
+          />
+          <label
+            className="absolute left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
+            htmlFor="email"
+          >
+            Email address
+          </label>
+        </div>
+        <div className="relative">
+          <textarea
+          className="peer relative -top-3.5 m-6 w-[33vw] h-12 rounded-md border-b-2 border-slate-900 focus:outline-none focus:border-violet-600 dark:focus:border-blue-600 placeholder-transparent"
+            type="text"
+            name="message"
+            id="message"
+            value={fmessage}
+            onChange={(e) => setMessage(e.target.value)}
+            placeholder="Message/Suggestions"
+            required
+          />
+          <label
+            className="absolute left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
+            htmlFor="message"
+          >
+            Message/Suggestions
+          </label>
+        </div>
+        <input className="bg-violet-500 text-slate-100 rounded-3xl p-2 hover:bg-blue-500 hover:text-slate-50 dark:hover:bg-blue-700 dark:hover:text-slate-50" type="submit" value="Full-Send!" />
+      </form>
+    </div>
+    <div className="mt-8 items-center dark:text-slate-50">
+      <div className="float-left pr-2">
         <BarIcon icon={<AiFillPhone />} />
         <p className="text-2xl">224-361-6080</p>
       </div>
-      <div>
+      <div className="float-right pl-2">
         <BarIcon icon={<AiTwotoneMail />} />
         <p className="text-2xl">greg.pounds3@outlook.com</p>
       </div>
