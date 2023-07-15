@@ -1,18 +1,20 @@
-import '../src/dist/output.css';
-import React from 'react';
+import "../src/dist/output.css";
+import React, { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 import Four0FourPage from "./components/Four0FourPage.jsx";
 import LandingPage from "./components/LandingPage.jsx";
 
-const container = document.getElementById("root")
-const root = createRoot(container)
+const container = document.getElementById("root");
+const root = createRoot(container);
 root.render(
-  <Router>
-    <Routes>
+  <StrictMode>
+    <Router>
+      <Routes>
         <Route path="*" element={<Four0FourPage />} />
         <Route path="/" element={<LandingPage />} />
-    </Routes>
-  </Router>
+      </Routes>
+    </Router>
+  </StrictMode>
 );
