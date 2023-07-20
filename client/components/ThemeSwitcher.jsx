@@ -1,28 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
-
 const ThemeController = () => {
+  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const userTheme = localStorage.getItem("theme");
   const [theme, setTheme] = useState(userTheme);
-  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  //check if theme exist
-  //manual switch
-  const themeSwitch = () => {
-    if (document.documentElement.classList.contains("dark")) {
-      setTheme('light');
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }else{
-      setTheme('dark');
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    }
-  };
+  useEffect (()=>{
+    themeCheck();
+  },[])
   //handle icon click
   const handleClick=(evt)=>{
     evt.preventDefault()
     themeSwitch()
-
   }
   //moon icon
   const MoonIcon = () => {
@@ -40,20 +28,29 @@ const ThemeController = () => {
       </div>
     );
   };
-  const themeCheck = () => {
-    if (userTheme === "dark" || (!userTheme && systemTheme)) {
-      document.documentElement.classList.add("dark");
-      !userTheme ?  setTheme('dark') : setTheme(userTheme);
-      console.log(userTheme)
+  //manual switch
+  const themeSwitch = () => {
+    if (document.documentElement.classList.contains("dark")) {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+      setTheme("light")
     }else{
-      !userTheme ? setTheme('light') : setTheme(userTheme);
-      console.log(userTheme)
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      setTheme("dark")
     }
   };
-  console.log(userTheme)
-  console.log(systemTheme)
-  //init
-  {themeCheck}
+  const themeCheck = () =>{
+    if( userTheme === "dark" || ( !userTheme && systemTheme )) {
+      localStorage.setItem("theme", "dark");
+      document.documentElement.classList.add("dark");
+      setTheme("dark")
+    }else{
+      localStorage.setItem("theme", "light");
+      document.documentElement.classList.remove("dark");
+      setTheme("light")
+    }
+  };
   return (
     <div>
       {theme === "dark" ? <SunIcon /> : <MoonIcon />}
