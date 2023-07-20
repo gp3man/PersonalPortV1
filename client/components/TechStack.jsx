@@ -28,6 +28,12 @@ const TechStack = () => {
     if(!inView){animation.start({x:-300}
       )}
   },[inView])
+  //future use
+  // const FrontEnd = [
+  //     {name: "React", icon: <DiReact />},
+  //   ]
+  // const BackEnd = []
+  // const ToolsDesigns = []
   return (
     <motion.section ref={ref} animate={animation} className="page" id="TechStack">
       <div className="uppercase text-4xl text-violet-600 m-6">

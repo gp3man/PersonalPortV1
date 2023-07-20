@@ -5,6 +5,7 @@ import ProjectCard from "./ProjectCard.jsx";
 import M1 from "../../src/assets/Mr-m1.PNG"
 import Shop1 from "../../src/assets/Shop-A-Shaq1.PNG"
 const Portfolio = () => {
+  // console.log(M1)
   const animation = useAnimation();
   const {ref, inView}= useInView({threshold: 0.3});
   useEffect(()=>{
@@ -18,13 +19,13 @@ const Portfolio = () => {
   },[inView])
   const projects =[
     {
-      screenshots: Shop1,
+      screenshots: [Shop1],
       summary: "An e-commerce website using frontend and backend tech",
       name: "Shop-A-Shaq",
       link: "https://graceshopperteam4.onrender.com/"
     },
     {
-      screenshots: M1,
+      screenshots: [M1],
       summary: "A survial game created using javascript",
       name: "Mr. Meowgi",
       link: "https://mr-meowgi.onrender.com/"
