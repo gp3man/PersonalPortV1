@@ -1,12 +1,9 @@
 import React from "react";
 import BarIcon from "./BarIcon.jsx";
 import { LuDownload} from "react-icons/lu";
-import {
-  MdDarkMode,
-  MdLightMode,
-} from "react-icons/md";
 import resume from "../../src/assets/Resume.pdf";
 import { NavLink } from "react-router-dom";
+import ThemeController from "./ThemeSwitcher.jsx";
 const NavBar = () => {
   //
   return (
@@ -24,31 +21,24 @@ const NavBar = () => {
             Portfolio
           </p>
         </NavLink>
+
         <a
           className="border-violet-500 dark:border-violet-300 border-opacity-30 border-r-2 px-3 cursor-crosshair"
           onClick={handleScroll}
         >
           <p className="hover:text-blue-400">Contact</p>
         </a>
+
         <a
           className="border-violet-500 dark:border-violet-300 border-opacity-30 border-r-2 px-3 cursor-crosshair"
           href={resume}
           download="GregoryPounds_Resume"
         >
-          <BarIcon icon={<LuDownload />} sponsor={"Resume"}>
+          <BarIcon icon={<LuDownload />}>
             <caption>Resume</caption>
           </BarIcon>
         </a>
-        <a className="moon px-3 cursor-crosshair">
-          <BarIcon icon={<MdDarkMode />}>
-            <caption>Dark Mode</caption>
-          </BarIcon>
-        </a>
-        <a className="sun hidden px-3 cursor-crosshair">
-          <BarIcon icon={<MdLightMode />}>
-            <caption>Light Mode</caption>
-          </BarIcon>
-        </a>
+        <ThemeController />
       </div>
     </section>
   );
