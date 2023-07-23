@@ -4,8 +4,8 @@ import { LuDownload} from "react-icons/lu";
 import resume from "../../src/assets/Resume.pdf";
 import { NavLink } from "react-router-dom";
 import ThemeController from "./ThemeSwitcher.jsx";
+import { useParams } from "react-router-dom";
 const NavBar = () => {
-  //
   return (
     <section
       id="NavBar"

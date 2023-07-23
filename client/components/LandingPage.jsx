@@ -13,10 +13,10 @@ const LandingPage = () => {
       <div className="dark:bg-slate-900 snap-y snap-mandatory overflow-x-hidden overflow-y-visible" id="LandingPage">
         <NavBar />
         <Profile />
-        <TechStack className="snap-start" />
-        <AboutMe className="snap-start" />
-        <Portfolio className="snap-start" />
-        <ContactForm className="snap-start" />
+        <TechStack />
+        <AboutMe />
+        <Portfolio />
+        <ContactForm />
       </div>
     </>
   );

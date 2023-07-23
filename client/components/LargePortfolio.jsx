@@ -1,5 +1,4 @@
 import React, {useEffect} from "react";
-import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import ProjectCard from "./ProjectCard.jsx";
 import M1 from "../../src/assets/Mr-m1.PNG"
@@ -9,19 +8,8 @@ import M4 from "../../src/assets/Mr-m4.PNG"
 import Shop1 from "../../src/assets/Shop-A-Shaq1.PNG"
 import Shop2 from "../../src/assets/Shop-A-Shaq2.PNG"
 import Shop3 from "../../src/assets/Shop-A-Shaq3.PNG"
-const Portfolio = () => {
-  // console.log(M1)
-  const animation = useAnimation();
-  const {ref, inView}= useInView({threshold: 0.3});
-  useEffect(()=>{
-    console.log('PortPage, inView =', inView)
-    if(inView){
-      animation.start({x:0, transition:{type:"spring", bounce:0.4, duration:3}
-      })
-    }
-    if(!inView){animation.start({x:-100}
-      )}
-  },[inView])
+import NavBar from "./NavBar.jsx";
+const LargePortfolio = () => {
   const projects =[
     {
       screenshots: [Shop1,Shop2, Shop3],
@@ -37,14 +25,15 @@ const Portfolio = () => {
     }
   ]
   return (
-    <motion.section ref={ref} animate={animation} className="page dark:text-slate-300 snap-start" id="Portfolio">
+    <section className="page dark:bg-slate-800 dark:text-slate-300 snap-start" id="Portfolio">
+      <NavBar />
       <h1 className="uppercase text-4xl text-violet-600 m-6">Portfolio</h1>
       <div className="h-[90%] w-[90%]">
       {projects.map((project)=>{
         return <ProjectCard data={project} key={project.name}/>
       })}
       </div>
-    </motion.section>
+    </section>
   );
 };
-export default Portfolio;
+export default LargePortfolio;
