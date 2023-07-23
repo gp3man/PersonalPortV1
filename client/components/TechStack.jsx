@@ -35,7 +35,7 @@ const TechStack = () => {
   // const BackEnd = []
   // const ToolsDesigns = []
   return (
-    <motion.section ref={ref} animate={animation} className="page" id="TechStack">
+    <motion.section ref={ref} animate={animation} className="page snap-start" id="TechStack">
       <div className="uppercase text-4xl text-violet-600 m-6">
       Tech Stack
       </div>

@@ -32,7 +32,7 @@ const Portfolio = () => {
     }
   ]
   return (
-    <motion.section ref={ref} animate={animation} className="page dark:text-slate-300" id="Portfolio">
+    <motion.section ref={ref} animate={animation} className="page dark:text-slate-300 snap-start" id="Portfolio">
       <h1 className="uppercase text-4xl text-violet-600 m-6">Portfolio</h1>
       <div>
       {projects.map((project)=>{

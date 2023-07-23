@@ -709,6 +709,10 @@ video {
   margin: auto;
 }
 
+.m-3 {
+  margin: 0.75rem;
+}
+
 .mx-3 {
   margin-left: 0.75rem;
   margin-right: 0.75rem;
@@ -774,6 +778,22 @@ video {
   height: 100%;
 }
 
+.h-1\/6 {
+  height: 16.666667%;
+}
+
+.h-\[\] {
+  height: ;
+}
+
+.h-\[20\] {
+  height: 20;
+}
+
+.h-\[20\%\] {
+  height: 20%;
+}
+
 .max-h-\[\] {
   max-height: ;
 }
@@ -817,6 +837,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[20\%\] {
+  width: 20%;
 }
 
 .max-w-\[600px\] {
@@ -876,6 +900,22 @@ video {
   cursor: pointer;
 }
 
+.snap-y {
+  scroll-snap-type: y var(--tw-scroll-snap-strictness);
+}
+
+.snap-mandatory {
+  --tw-scroll-snap-strictness: mandatory;
+}
+
+.snap-start {
+  scroll-snap-align: start;
+}
+
+.snap-end {
+  scroll-snap-align: end;
+}
+
 .columns-1 {
   -moz-columns: 1;
        columns: 1;
@@ -922,6 +962,34 @@ video {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-x-clip {
+  overflow-x: clip;
+}
+
+.overflow-y-clip {
+  overflow-y: clip;
+}
+
+.overflow-y-visible {
+  overflow-y: visible;
 }
 
 .whitespace-nowrap {
@@ -1083,6 +1151,18 @@ video {
 
 .pt-8 {
   padding-top: 2rem;
+}
+
+.pl-8 {
+  padding-left: 2rem;
+}
+
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
 }
 
 .text-2xl {
