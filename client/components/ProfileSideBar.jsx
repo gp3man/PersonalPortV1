@@ -12,29 +12,25 @@ const Profile = () => {
   };
   return (
     <motion.section
-      className="flex flex-col min-h-screen m-1 pt-16 pb-14 content-center text-center items-center border border-violet-900 justify-items-center dark:text-slate-300"
+      className="flex flex-col min-h-screen m-1 pt-32 pb-14 content-center text-center items-center border border-violet-900 justify-items-center dark:text-slate-300"
       id="Profile"
     >
       <img
-        className="w-32 h-32 rounded-full animate-pulse flex space-x-4"
+        className="w-32 h-32 rounded-full animate- animate-bounce duration-300 space-x-4"
         src={Me6}
       />
-      <h1 className="text-3xl uppercase m-6">Gregory Pounds</h1>
+      <h1 className="text-4xl uppercase m-6 font-bold">Gregory Pounds</h1>
       <h2 className="text-2xl uppercase bg-violet-500 dark:bg-violet-700 text-slate-100 rounded-full m-6 p-2">
-        {" "}
         Software Developer
       </h2>
-      <p className="font-bold text-lg">High level experience in web design and development knowledge.</p>
 
-      <div className="flex justify-between pt-14">
+      <div className="flex content-evenly pt-2">
         <a href="https://github.com/gp3man" target="new">
-          <BarIcon icon={<ImGithub />}>
-            <small>GitHub</small>{" "}
+          <BarIcon icon={<ImGithub />} tooltip={"GitHub"}>
           </BarIcon>
         </a>
         <a href="https://www.linkedin.com/in/gregory-pounds" target="new">
-          <BarIcon icon={<ImLinkedin />}>
-            <small>LinkedIn</small>{" "}
+          <BarIcon icon={<ImLinkedin />} tooltip={"LinkedIn"}>
           </BarIcon>
         </a>
       </div>
@@ -44,7 +40,8 @@ const Profile = () => {
       >
         Contact
       </button>
-      <div className="flex flex-col bottom-12 translate-y-full animate-pulse">
+      <p className="font-extralight pt-16 text-lg">High level experience in web design and development knowledge.</p>
+      <div className="flex flex-col absolute bottom-20 translate-y-full animate-pulse">
         Scroll Down
         <BarIcon
           icon={<TbFoldDown />}

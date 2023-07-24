@@ -42,66 +42,51 @@ const TechStack = () => {
       <div className="flex dark:text-slate-50">
         <div>
           FrontEnd
-          <div className="columns-2 p-4 ">
-          <BarIcon icon={<DiReact />}>
-            <caption>React</caption>{" "}
+          <div className="columns-2 p-4">
+          <BarIcon icon={<DiReact />} tooltip={"React"}>
           </BarIcon>
-          <BarIcon icon={<TbBrandRedux />}>
-            <caption>Redux</caption>{" "}
+          <BarIcon icon={<TbBrandRedux />} tooltip={"Redux"}>
           </BarIcon>
-          <BarIcon icon={<DiJsBadge />}>
-            <caption>NodeJS</caption>{" "}
+          <BarIcon icon={<DiJsBadge />} tooltip={"NodeJS"}>
           </BarIcon>
-          <BarIcon icon={<DiCss3 />}>
-            <caption>CSS</caption>{" "}
+          <BarIcon icon={<DiCss3 />} tooltip={"CSS"}>
           </BarIcon>
-          <BarIcon icon={<TbBrandTailwind />}>
-            <caption>TailwindCSS</caption>{" "}
+          <BarIcon icon={<TbBrandTailwind />} tooltip={"TailwindCSS"}>
           </BarIcon></div>
         </div>
 
         <div >
           BackEnd
           <div className="columns-2 p-4 ">
-          <BarIcon icon={<BsFiletypeSql />}>
-            <caption>SQL</caption>{" "}
+          <BarIcon icon={<BsFiletypeSql />} tooltip={"SQL"}>
           </BarIcon>
-          <BarIcon icon={<SiSequelize />}>
-            <caption>Sequelize</caption>{" "}
+          <BarIcon icon={<SiSequelize />} tooltip={"Sequelize"}>
           </BarIcon>
-          <BarIcon icon={<DiPostgresql />}>
-            <caption>Postgresql</caption>{" "}
+          <BarIcon icon={<DiPostgresql />} tooltip={"Postgresql"}>
           </BarIcon>
-          <BarIcon icon={<FaJava />}>
-            <caption>Java</caption>{" "}
+          <BarIcon icon={<FaJava />} tooltip={"Java"}>
           </BarIcon></div>
         </div>
 
         <div>
           Tools
           <div className="columns-2 p-4 ">
-          <BarIcon icon={<FaGit />}>
-            <caption>Git</caption>{" "}
+          <BarIcon icon={<FaGit />} tooltip={"Git"}>
           </BarIcon>
-          <BarIcon icon={<DiLinux />}>
-            <caption>WSL</caption>{" "}
+          <BarIcon icon={<DiLinux />} tooltip={"WSL"}>
           </BarIcon>
-          <BarIcon icon={<DiVisualstudio />}>
-            <caption>Visual Studio Code</caption>{" "}
+          <BarIcon icon={<DiVisualstudio />} tooltip={"Visual Studio Code"}>
           </BarIcon>
-          <BarIcon icon={<SiInsomnia />}>
-            <caption>Insomnia</caption>{" "}
+          <BarIcon icon={<SiInsomnia />} tooltip={"Insomnia"}>
           </BarIcon>
-          <BarIcon icon={<DiPhotoshop />}>
-            <caption>PhotoShop Suite</caption>{" "}
+          <BarIcon icon={<DiPhotoshop />} tooltip={"PhotoShop"}>
           </BarIcon></div>
         </div>
 
         <div>
           Design
           <div className="columns-1 p-4 ">
-          <BarIcon icon={<FaFigma />}>
-            <caption>Figma</caption>{" "}
+          <BarIcon icon={<FaFigma />} tooltip={"Figma"}>
           </BarIcon></div>
         </div>
       </div>

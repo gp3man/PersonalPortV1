@@ -10,9 +10,9 @@ const NavBar = () => {
   return (
     <section
       id="NavBar"
-      className="fixed top-0 left-0 right-0 h-14 w-screen p-4 z-40 flex flex-row opacity-100 dark:opacity-80 bg-slate-600 dark:bg-gray-900 text-slate-300  dark:text-slate-100  shadow justify-around"
+      className="fixed top-0 left-0 right-0 h-[58px] w-screen p-4 z-40 flex flex-row opacity-100 dark:opacity-80 bg-slate-600 dark:bg-gray-900 text-slate-300  dark:text-slate-100 shadow justify-around"
     >
-      <div className="text-violet-500 dark:text-slate-50 cursor-crosshair">
+      <div className="text-violet-500 dark:text-slate-50 italic font-extralight text-2xl top-[50%] cursor-pointer">
         <p>Gregory Pounds</p>
       </div>
 
@@ -42,8 +42,7 @@ const NavBar = () => {
           href={resume}
           download="GregoryPounds_Resume"
         >
-          <BarIcon icon={<LuDownload />}>
-            <caption>Resume</caption>
+          <BarIcon icon={<LuDownload />} tooltip={"Resume"}>
           </BarIcon>
         </a>
         <ThemeController />

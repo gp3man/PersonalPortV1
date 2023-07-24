@@ -52,7 +52,7 @@ const ThemeController = () => {
     }
   };
   return (
-    <div>
+    <div className="">
       {theme === "dark" ? <SunIcon /> : <MoonIcon />}
     </div>
   );
