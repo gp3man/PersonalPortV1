@@ -1,11 +1,12 @@
 import React from "react";
 import BarIcon from "./BarIcon.jsx";
-import { LuDownload} from "react-icons/lu";
+import { LuDownload } from "react-icons/lu";
 import resume from "../../src/assets/Resume.pdf";
 import { NavLink } from "react-router-dom";
 import ThemeController from "./ThemeSwitcher.jsx";
-import { useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 const NavBar = () => {
+  const location = useLocation();
   return (
     <section
       id="NavBar"
@@ -16,19 +17,26 @@ const NavBar = () => {
       </div>
 
       <div className="flex flex-row text-slate-300 dark:text-slate-200 pr-4  justify-around">
-        <NavLink to={"/Portfolio"}>
-          <p className="border-violet-500 hover:text-blue-400 dark:border-violet-300 border-opacity-30 border-r-2 px-3 cursor-crosshair">
-            Portfolio
-          </p>
-        </NavLink>
-
+        {location.pathname === "/" && (
+          <NavLink to={"/Portfolio"}>
+            <p className="border-violet-500 hover:text-blue-400 dark:border-violet-300 border-opacity-30 border-r-2 px-3 cursor-crosshair">
+              Portfolio
+            </p>
+          </NavLink>
+        )}
+        {location.pathname === "/Portfolio" && (
+          <NavLink to={"/"}>
+            <p className="border-violet-500 hover:text-blue-400 dark:border-violet-300 border-opacity-30 border-r-2 px-3 cursor-crosshair">
+              Home
+            </p>
+          </NavLink>
+        )}
         <a
-          className="border-violet-500 dark:border-violet-300 border-opacity-30 border-r-2 px-3 cursor-crosshair"
+          className="border-violet-500 dark:border-violet-300 hover:text-blue-400 border-opacity-30 border-r-2 px-3 cursor-crosshair"
           onClick={handleScroll}
         >
-          <p className="hover:text-blue-400">Contact</p>
+          Contact
         </a>
-
         <a
           className="border-violet-500 dark:border-violet-300 border-opacity-30 border-r-2 px-3 cursor-crosshair"
           href={resume}

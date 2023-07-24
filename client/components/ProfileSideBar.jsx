@@ -12,7 +12,7 @@ const Profile = () => {
   };
   return (
     <motion.section
-      className="page justify-items-center dark:text-slate-300"
+      className="flex flex-col min-h-screen m-1 pt-16 pb-14 content-center text-center items-center border border-violet-900 justify-items-center dark:text-slate-300"
       id="Profile"
     >
       <img
@@ -44,8 +44,8 @@ const Profile = () => {
       >
         Contact
       </button>
-      <div className="flex flex-col translate-y-full animate-pulse">
-        <small className="font-bold text-lg">Click Arrow For More</small>
+      <div className="flex flex-col bottom-12 translate-y-full animate-pulse">
+        Scroll Down
         <BarIcon
           icon={<TbFoldDown />}
         />

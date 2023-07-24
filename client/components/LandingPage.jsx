@@ -7,12 +7,12 @@ import NavBar from "./NavBar.jsx";
 import Profile from "./ProfileSideBar.jsx";
 
 const LandingPage = () => {
-
   return (
     <>
-      <div className="dark:bg-slate-900 snap-y snap-mandatory overflow-x-hidden overflow-y-visible" id="LandingPage">
+      <div className="snap-y snap-mandatory overflow-x-hidden overflow-y-visible" id="LandingPage">
         <NavBar />
         <Profile />
+        {/* <section className="page" /> */}
         <TechStack />
         <AboutMe />
         <Portfolio />
