@@ -10,7 +10,7 @@ const LandingPage = () => {
   return (
     <>
       <div
-        className="snap-y snap-mandatory overflow-x-hidden overflow-y-visible"
+        // className="snap-y snap-mandatory overflow-x-hidden overflow-y-visible"
         id="LandingPage"
       >
         <NavBar />

@@ -16,7 +16,7 @@ const AboutMe = () => {
       )}
   },[inView])
   return (
-      <motion.section ref={ref} animate={animation} className="page snap-start px-14" id="AboutMe">
+      <motion.section ref={ref} animate={animation} className="page px-14" id="AboutMe">
         <h1 className="uppercase text-4xl text-violet-600 m-6">About Me</h1>
         <img className="w-24 h-24 rounded-full" src={Greg}/>
         <p className="text-2xl text-left dark:text-slate-50 w-[88%] pt-14 font-extralight italic">

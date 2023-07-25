@@ -18,12 +18,11 @@ const PhotoCard = ( ) => {
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
-  const gotToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
-  };
+  // const gotToSlide = (slideIndex) => {
+  //   setCurrentIndex(slideIndex);
+  // };
   return (
     <div>
-      {/* {console.log(photos)} */}
       <h1 className="uppercase italic text-2xl font-bold text-violet-600 m-6">
         Photography
       </h1>

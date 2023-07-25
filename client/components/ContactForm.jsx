@@ -68,7 +68,7 @@ const ContactForm = () => {
     <motion.section
       ref={ref}
       animate={animation}
-      className="page snap-start"
+      className="page"
       id="contactForm"
     >
       <h1 className="uppercase text-4xl text-violet-600 m-6">Contact Me</h1>

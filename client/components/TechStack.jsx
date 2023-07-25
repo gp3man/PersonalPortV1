@@ -35,7 +35,7 @@ const TechStack = () => {
     <motion.section
       ref={ref}
       animate={animation}
-      className="page snap-start"
+      className="page"
       id="TechStack"
     >
       <div className="uppercase text-4xl text-violet-600 m-6">Tech Stack</div>
