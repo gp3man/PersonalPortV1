@@ -4,7 +4,7 @@ module.exports = {
   output: {
     path: __dirname + "/src",
     filename: "bundle.js",
-    assetModuleFilename: "assets/[hash][ext]",
+    assetModuleFilename: "assets/hash/[hash][ext]",
   },
   context: __dirname,
   devtool: "source-map",
