@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
-import { HiMiniPhoto } from "react-icons/hi2";
-const PhotoCard = ( photos ) => {
-  const photos  = photos;
+import p1 from "../../src/assets/img1.jpg"
+import p2 from "../../src/assets/img2.jpg"
+import p3 from "../../src/assets/img3.jpg"
+import p4 from "../../src/assets/img4.jpg"
+// import { HiMiniPhoto } from "react-icons/hi2";
+const photos = [p1,p2,p3,p4]
+const PhotoCard = ( ) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
@@ -19,13 +23,13 @@ const PhotoCard = ( photos ) => {
   };
   return (
     <div>
-      {console.log(photos)}
+      {/* {console.log(photos)} */}
       <h1 className="uppercase italic text-2xl font-bold text-violet-600 m-6">
         Photography
       </h1>
       <div className="flex">
         <div>
-          <div className="min-h-[300px] min-w-[500px] w-full m-auto py-16 px-4 relative group">
+          <div className="mobi:min-w-[300px] md:min-w-[500px] lg:min-w-[800px] xl:min-w-[1000px] min-h-[300px] w-full m-auto py-16 px-4 relative group">
             <div
               style={{ backgroundImage: `url(${photos[currentIndex]})` }}
               className="absolute top-0 left-0 w-full h-full rounded-2xl bg-center bg-cover duration-500"
@@ -39,7 +43,7 @@ const PhotoCard = ( photos ) => {
               <BsChevronCompactRight onClick={nextSlide} size={30} />
             </div>
           </div>
-          <div className="flex top-4 justify-center py-2">
+          {/* <div className="flex top-4 justify-center py-2">
             {photos.map((shot, slideIndex) => (
               <div
                 key={slideIndex}
@@ -49,7 +53,7 @@ const PhotoCard = ( photos ) => {
                 <HiMiniPhoto />
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

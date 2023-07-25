@@ -21,8 +21,8 @@ const Profile = () => {
         className="w-32 h-32 rounded-full animate- animate-bounce duration-300 space-x-4"
         src={Me6}
       />
-      <h1 className="text-4xl uppercase m-6 font-bold">Gregory Pounds</h1>
-      <h2 className="text-2xl uppercase bg-violet-500 dark:bg-violet-700 text-slate-100 rounded-full m-6 p-2">
+      <h1 className="text-4xl uppercase m-6 text-slate-50 font-bold">Gregory Pounds</h1>
+      <h2 className="text-2xl uppercase bg-violet-500 dark:bg-violet-700 text-slate-50 rounded-full m-6 p-2">
         Software Developer
       </h2>
 
@@ -43,9 +43,9 @@ const Profile = () => {
       <p className="font-extralight text-slate-50 pt-16 text-xl">
         High level experience in web design and development knowledge.
       </p>
-      <div className="flex flex-col absolute bottom-20 translate-y-full animate-pulse text-4xl">
+      <div className="flex flex-col absolute bottom-20 text-slate-50 translate-y-full animate-pulse text-4xl">
         Scroll Down
-        <BarIcon icon={<TbFoldDown />} />
+        <BarIcon icon={<TbFoldDown size={120} />} />
       </div>
     </motion.section>
   );

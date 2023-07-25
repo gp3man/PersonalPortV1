@@ -77,7 +77,7 @@ const ContactForm = () => {
         Let's get Connected!
       </p>
       {status && renderAlert()}
-      <div className="float-left">
+      <div className=" mobi:flex mobi:flex-col md:flex-row float-left">
         <div className="shadow-md shadow-violet-500 pb-7 float-left">
           <form onSubmit={onSubmitHandle}>
             <div className="relative mt-12">
@@ -142,7 +142,7 @@ const ContactForm = () => {
             />
           </form>
         </div>
-        <div className="mt-8 items-center dark:text-slate-50 float-right pl-8">
+        <div className="mt-8 items-center dark:text-slate-50 sm:float-right pl-8">
           <div className="pb-8">
             <a onClick={copyNumber}>
               {" "}

@@ -22,9 +22,9 @@ const ProjectCard = ({ data }) => {
       <h1 className="uppercase italic text-2xl font-bold text-violet-600 m-6">
         {name}
       </h1>
-      <div className="flex">
+      <div className="flex mobi:flex-col md:flex-row">
         <div>
-          <div className="min-h-[300px] min-w-[500px] w-full m-auto py-16 px-4 relative group">
+          <div className="mobi:min-w-[300px] md:min-w-[500px] min-h-[300px] min-w-[500px] w-full m-auto py-16 px-4 relative group">
             <div
               style={{ backgroundImage: `url(${screenshots[currentIndex]})` }}
               className="absolute top-0 left-0 w-full h-full rounded-2xl bg-center bg-cover duration-500"
@@ -50,7 +50,7 @@ const ProjectCard = ({ data }) => {
             ))}
           </div>
         </div>
-        <div className="w-1/6 h-1/6 pl-10 flex-wrap text-right">
+        <div className="mobi:w-4/5 w-1/3 h-1/3 pl-10 flex-wrap text-right align-middle">
           <p>{summary}</p>
           <a
             className="italic align-text-bottom hover:text-blue-700 pt-10"

@@ -2,6 +2,7 @@ import React, {useEffect} from "react";
 import {  motion, useAnimation} from "framer-motion";
 import { useInView } from 'react-intersection-observer'
 import Greg from "../../src/assets/greg.jpg"
+import PhotoCard from "./PhotographyCard.jsx";
 const AboutMe = () => {
   const animation = useAnimation();
   const {ref, inView}= useInView({threshold: 0.1});
@@ -18,7 +19,7 @@ const AboutMe = () => {
       <motion.section ref={ref} animate={animation} className="page snap-start px-14" id="AboutMe">
         <h1 className="uppercase text-4xl text-violet-600 m-6">About Me</h1>
         <img className="w-24 h-24 rounded-full" src={Greg}/>
-        <h3 className="dark:text-slate-300 flex-wrap">
+        <p className="text-2xl text-left dark:text-slate-50 w-[88%] pt-14 font-extralight italic">
           Prior to my pivot into the tech industry I was immersed in the ups and
           down of being a retail/warehouse manager. After bumping my head, going
           full speed trying to make a living by climbing ladders, I took a hard
@@ -28,7 +29,8 @@ const AboutMe = () => {
           dreams! I have now graduated my web development boot camp. I seek a
           path to create technologies that will impact and advance the human
           experience on this floating rock we all share.
-        </h3>
+        </p>
+        <PhotoCard />
       </motion.section>
   );
 };

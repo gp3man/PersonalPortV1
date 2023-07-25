@@ -31,12 +31,6 @@ const TechStack = () => {
       animation.start({ x: -300 });
     }
   }, [inView]);
-  //future use
-  // const FrontEnd = [
-  //     {name: "React", icon: <DiReact />},
-  //   ]
-  // const BackEnd = []
-  // const ToolsDesigns = []
   return (
     <motion.section
       ref={ref}
@@ -45,7 +39,7 @@ const TechStack = () => {
       id="TechStack"
     >
       <div className="uppercase text-4xl text-violet-600 m-6">Tech Stack</div>
-      <div className="flex dark:text-slate-50">
+      <div className="flex mobi:flex-col sm:flex-row dark:text-slate-50">
         <div>
           FrontEnd
           <div className="columns-2 p-4">
@@ -59,7 +53,6 @@ const TechStack = () => {
             ></BarIcon>
           </div>
         </div>
-
         <div>
           BackEnd
           <div className="columns-2 p-4">
@@ -69,7 +62,6 @@ const TechStack = () => {
             <BarIcon icon={<FaJava />} tooltip={"Java"}></BarIcon>
           </div>
         </div>
-
         <div>
           Tools
           <div className="columns-2 p-4">
@@ -83,7 +75,6 @@ const TechStack = () => {
             <BarIcon icon={<DiPhotoshop />} tooltip={"PhotoShop"}></BarIcon>
           </div>
         </div>
-
         <div>
           Design
           <div className="columns-1 p-4">
@@ -97,7 +88,7 @@ const TechStack = () => {
         <div className="absolute -bottom-8 left-4 h-32 w-32 bg-violet-800 rounded-full mix-blend-multiply blur-xl opacity-50 animate-blob animate-delay-4000"></div>
         <div className="absolute -bottom-8 -right-4 w-32 h-32 bg-violet-400 rounded-full mix-blend-multiply blur-xl opacity-50 animate-blob animate-delay-6000"></div>
       </div>
-      <div className="flex flex-wrap text-xl text-left w-2/3 pt-14">
+      <div className="flex flex-wrap text-xl text-left dark:text-slate-50 w-2/3 pt-14">
         <p>
           <span className="text-bold text-violet-600">Looking Back: </span>Hey,
           there! I am a fullstack software developer that has been coding for
