@@ -4,18 +4,18 @@ const ThemeController = () => {
   const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const userTheme = localStorage.getItem("theme");
   const [theme, setTheme] = useState(userTheme);
-  useEffect (()=>{
+  useEffect(() => {
     themeCheck();
-  },[])
+  }, []);
   //handle icon click
-  const handleClick=(evt)=>{
-    evt.preventDefault()
-    themeSwitch()
-  }
+  const handleClick = (evt) => {
+    evt.preventDefault();
+    themeSwitch();
+  };
   //moon icon
   const MoonIcon = () => {
     return (
-      <div onClick={(evt)=>handleClick(evt)} className={"bar-icon"}>
+      <div onClick={(evt) => handleClick(evt)} className={"bar-icon"}>
         <MdDarkMode />
       </div>
     );
@@ -23,7 +23,7 @@ const ThemeController = () => {
   //sun icon
   const SunIcon = () => {
     return (
-      <div onClick={(evt)=>handleClick(evt)} className={"bar-icon"}>
+      <div onClick={(evt) => handleClick(evt)} className={"bar-icon"}>
         <MdLightMode />
       </div>
     );
@@ -33,28 +33,26 @@ const ThemeController = () => {
     if (document.documentElement.classList.contains("dark")) {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
-      setTheme("light")
-    }else{
+      setTheme("light");
+    } else {
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
-      setTheme("dark")
+      setTheme("dark");
     }
   };
-  const themeCheck = () =>{
-    if( userTheme === "dark" || ( !userTheme && systemTheme )) {
+  const themeCheck = () => {
+    if (userTheme === "dark" || (!userTheme && systemTheme)) {
       localStorage.setItem("theme", "dark");
       document.documentElement.classList.add("dark");
-      setTheme("dark")
-    }else{
+      setTheme("dark");
+    } else {
       localStorage.setItem("theme", "light");
       document.documentElement.classList.remove("dark");
-      setTheme("light")
+      setTheme("light");
     }
   };
   return (
-    <div className="">
-      {theme === "dark" ? <SunIcon /> : <MoonIcon />}
-    </div>
+    <div className="">{theme === "dark" ? <SunIcon /> : <MoonIcon />}</div>
   );
 };
 export default ThemeController;

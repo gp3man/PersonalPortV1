@@ -21,7 +21,6 @@ const ContactForm = () => {
       animation.start({ x: -100 });
     }
   }, [inView]);
-  // const Navigate = useNavigate();
   const onSubmitHandle = (evt) => {
     evt.preventDefault();
     const messagePac = {
@@ -157,6 +156,12 @@ const ContactForm = () => {
             </a>
             <p className="text-2xl">greg.pounds3@outlook.com</p>
           </div>
+        </div>
+        <div className="relative -z-10">
+          <div className="absolute top-0 -left-4 w-32 h-32 bg-violet-600 rounded-full mix-blend-multiply blur-xl opacity-50 animate-blob animate-delay-2000"></div>
+          <div className="absolute top-0 -right-4 h-32 w-32 bg-blue-300 rounded-full mix-blend-multiply blur-xl opacity-50 animate-blob animate-delay-8000"></div>
+          <div className="absolute -bottom-8 left-4 h-32 w-32 bg-violet-800 rounded-full mix-blend-multiply blur-xl opacity-50 animate-blob animate-delay-4000"></div>
+          <div className="absolute -bottom-8 -right-4 w-32 h-32 bg-violet-400 rounded-full mix-blend-multiply blur-xl opacity-50 animate-blob animate-delay-6000"></div>
         </div>
       </div>
     </motion.section>

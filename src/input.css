@@ -9,4 +9,20 @@
   .page{
     @apply flex flex-col min-h-screen m-1 pt-16 pb-14 content-center text-center items-center border border-violet-900
   }
+
 }
+@layer utilities{
+.animate-delay-2000{
+    animation-delay: 2s;
+  }
+  .animate-delay-4000{
+    animation-delay: 4s;
+  }
+  .animate-delay-6000{
+    animation-delay: 6s;
+  }
+  .animate-delay-8000{
+    animation-delay: 8s;
+  }
+}
+

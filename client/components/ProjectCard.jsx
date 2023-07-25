@@ -50,17 +50,18 @@ const ProjectCard = ({ data }) => {
             ))}
           </div>
         </div>
-        <div className="w-1/6 h-1/6 flex-wrap text-right">
+        <div className="w-1/6 h-1/6 pl-10 flex-wrap text-right">
           <p>{summary}</p>
-          <a className="hover:text-blue-700" href={link} target="new">
+          <a
+            className="italic align-text-bottom hover:text-blue-700 pt-10"
+            href={link}
+            target="new"
+          >
             Go To Page
           </a>
         </div>
       </div>
     </div>
   );
-};
-const renderPics = () => {
-  return;
 };
 export default ProjectCard;
