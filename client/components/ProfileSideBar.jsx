@@ -13,7 +13,7 @@ const Profile = () => {
   };
   return (
     <motion.section
-      className="flex flex-col min-h-screen m-1 pt-32 pb-14 content-center text-center items-center border border-violet-900 justify-items-center dark:text-slate-300 bg-cover bg-center bg-origin-border bg-fixed"
+      className="flex flex-col min-h-screen m-1 pt-32 pb-14 content-center text-center items-center justify-items-center dark:text-slate-300 bg-cover bg-center bg-origin-border bg-fixed"
       id="Profile"
       style={{ backgroundImage: `url(${I})` }}
     >

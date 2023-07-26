@@ -28,7 +28,7 @@ const PhotoCard = ( ) => {
       </h1>
       <div className="flex">
         <div>
-          <div className="mobi:min-w-[300px] md:min-w-[500px] lg:min-w-[800px] xl:min-w-[1000px] min-h-[300px] w-full m-auto py-16 px-4 relative group">
+          <div className="mobi:min-w-[300px] md:min-w-[500px] lg:min-w-[800px] xl:min-w-[1000px] lg:min-h-[600px]  mobi:min-h-[300px] w-full m-auto py-16 px-4 relative group">
             <div
               style={{ backgroundImage: `url(${photos[currentIndex]})` }}
               className="absolute top-0 left-0 w-full h-full rounded-2xl bg-center bg-cover duration-500"
