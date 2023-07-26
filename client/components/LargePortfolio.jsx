@@ -13,19 +13,19 @@ const LargePortfolio = () => {
     {
       screenshots: [Shop1, Shop2, Shop3],
       summary:
-        "An e-commerce website for big and tall individuals. Demo(Username:Admin, Pw: 1234)",
+        "An e-commerce website made for big and tall individuals. Demo(Username: Admin, Pw: 1234). This was created alongside @justinpsiegel @Rhyan9311 @soloweshop243. We worked as a team to create a mock website that allows you to purchase clothing from our store. Though, the styling is wacky, we did a lot of heavy lifting in terms of creating the correct and proper database schema that will serve to the frontend react app. We plan on expanding on this app by fixing the styling, adding more items, and giving admin users extra controls over the database.",
       name: "Shop-A-Shaq",
       link: "https://graceshopperteam4.onrender.com/",
     },
     {
       screenshots: [M1, M2, M3, M4],
-      summary: "A silly survival game, yes, you play as a cat.",
+      summary: "A silly survival game, yes, you play as a cat. This was created alongside @RayMangahas @Devontef213 @aaronsprayberry. We worked towards making our own creation of a game that anyone can enjoy. We plan to expand by creating more levels/maps, as well as adding more incentives to continue playing the game. This was a huge learning curve but it was definitely an eye opener to what it truly takes to create high quality game.",
       name: "Mr. Meowgi",
       link: "https://mr-meowgi.onrender.com/",
     },
   ];
   return (
-    <section className="page dark:text-slate-300 snap-start" id="Portfolio">
+    <section className="page dark:text-slate-300" id="Portfolio">
       <NavBar />
       <h1 className="uppercase text-4xl text-violet-600 m-6">Portfolio</h1>
       <div className="h-[90%] w-[90%]">
@@ -33,6 +33,7 @@ const LargePortfolio = () => {
           return <ProjectCard data={project} key={project.name} />;
         })}
       </div>
+      <p className="text-4xl font-bold text-violet-700">More projects coming soon!</p>
     </section>
   );
 };

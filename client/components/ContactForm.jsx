@@ -10,15 +10,16 @@ const ContactForm = () => {
   const animation = useAnimation();
   const { ref, inView } = useInView({ threshold: 0.3 });
   useEffect(() => {
-    console.log("ContactPage, inView =", inView);
+    // console.log("ContactPage, inView =", inView);
     if (inView) {
       animation.start({
-        x: 0,
-        transition: { type: "spring", bounce: 0.4, duration: 3 },
+        y: 0,
+        opacity: 1,
+        transition: { type: "spring", bounce: 0.4, duration: 5 },
       });
     }
     if (!inView) {
-      animation.start({ x: -100 });
+      animation.start({ y: -200, opacity:0 });
     }
   }, [inView]);
   const onSubmitHandle = (evt) => {
@@ -68,7 +69,7 @@ const ContactForm = () => {
     <motion.section
       ref={ref}
       animate={animation}
-      className="page snap-start"
+      className="page"
       id="contactForm"
     >
       <h1 className="uppercase text-4xl text-violet-600 m-6">Contact Me</h1>
@@ -77,7 +78,7 @@ const ContactForm = () => {
         Let's get Connected!
       </p>
       {status && renderAlert()}
-      <div className="float-left">
+      <div className=" mobi:flex mobi:flex-col md:flex-row float-left">
         <div className="shadow-md shadow-violet-500 pb-7 float-left">
           <form onSubmit={onSubmitHandle}>
             <div className="relative mt-12">
@@ -142,7 +143,7 @@ const ContactForm = () => {
             />
           </form>
         </div>
-        <div className="mt-8 items-center dark:text-slate-50 float-right pl-8">
+        <div className="mt-8 items-center dark:text-slate-50 sm:float-right pl-8">
           <div className="pb-8">
             <a onClick={copyNumber}>
               {" "}
