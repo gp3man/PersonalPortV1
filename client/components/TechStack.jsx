@@ -20,15 +20,16 @@ const TechStack = () => {
   const animation = useAnimation();
   const { ref, inView } = useInView({ threshold: 0.1 });
   useEffect(() => {
-    console.log("TechPage, inView =", inView);
+    // console.log("TechPage, inView =", inView);
     if (inView) {
       animation.start({
         x: 0,
-        transition: { type: "spring", bounce: 0.4, duration: 3 },
+        opacity: 1,
+        transition: { type: "spring", bounce: 0.4, duration: 5 },
       });
     }
     if (!inView) {
-      animation.start({ x: -300 });
+      animation.start({ x: -200, opacity: 0});
     }
   }, [inView]);
   return (
@@ -104,7 +105,7 @@ const TechStack = () => {
           knowledgeable on using and maintaining a github organization.
         </p>
         <p>
-          <span className="text-bold text-violet-600">Looking Forward:</span>
+          <span className="text-bold text-violet-600">Looking Forward: </span>
           After finishing up this portfolio site from scratch, I plan on working
           on more projects to expand my skills. This path will involve learning
           more about nosql and revisiting Java for expanding backend knowledge.

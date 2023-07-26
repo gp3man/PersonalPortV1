@@ -10,15 +10,16 @@ const ContactForm = () => {
   const animation = useAnimation();
   const { ref, inView } = useInView({ threshold: 0.3 });
   useEffect(() => {
-    console.log("ContactPage, inView =", inView);
+    // console.log("ContactPage, inView =", inView);
     if (inView) {
       animation.start({
-        x: 0,
-        transition: { type: "spring", bounce: 0.4, duration: 3 },
+        y: 0,
+        opacity: 1,
+        transition: { type: "spring", bounce: 0.4, duration: 5 },
       });
     }
     if (!inView) {
-      animation.start({ x: -100 });
+      animation.start({ y: -200, opacity:0 });
     }
   }, [inView]);
   const onSubmitHandle = (evt) => {

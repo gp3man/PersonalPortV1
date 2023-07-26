@@ -31,12 +31,14 @@ const NavBar = () => {
             </p>
           </NavLink>
         )}
+        {location.pathname === "/" && (
         <a
           className="border-violet-500 dark:border-violet-300 hover:text-blue-400 border-opacity-30 border-r-2 px-3 cursor-crosshair"
           onClick={handleScroll}
         >
           Contact
         </a>
+        )}
         <a
           className="border-violet-500 dark:border-violet-300 border-opacity-30 border-r-2 px-3 cursor-crosshair"
           href={resume}
