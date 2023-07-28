@@ -29,7 +29,7 @@ const Portfolio = () => {
     {
       screenshots: [Shop1, Shop2, Shop3],
       summary:
-        "An e-commerce website for big and tall individuals. Demo(Username:admin, Pw: 123)",
+        "An e-commerce website for big and tall individuals. Demo( Username:admin, Pw: 123 )",
       name: "Shop-A-Shaq",
       link: "https://graceshopperteam4.onrender.com/",
     },
