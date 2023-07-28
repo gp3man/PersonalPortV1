@@ -26,7 +26,7 @@ const AboutMe = () => {
           look back and saw titles may have changed but my impact remained the
           same. Taking the my internal conflict of not making a difference on a
           macro level, I made the calculated leap of faith into the career of my
-          dreams! I have now graduated my web development boot camp. I seek a
+          dreams! I have now graduated from my web development boot camp. I seek a
           path to create technologies that will impact and advance the human
           experience on this floating rock we all share.
         </p>
