@@ -1,4 +1,6 @@
-## Greg's World
+## Version one
+
+# Greg's World
 Sooooo... I am taking a leap here, hear me out.
 
 Welcome to my first portfolio website! 
