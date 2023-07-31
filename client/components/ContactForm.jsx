@@ -147,13 +147,13 @@ const ContactForm = () => {
           <div className="pb-8">
             <a onClick={copyNumber}>
               {" "}
-              <BarIcon icon={<AiFillPhone />} />
+              <BarIcon icon={<AiFillPhone />} tooltip={"Copy Phone Number"}/>
             </a>
             <p className="text-2xl">224-361-6080</p>
           </div>
           <div>
             <a onClick={copyEmail}>
-              <BarIcon icon={<AiTwotoneMail />} />
+              <BarIcon icon={<AiTwotoneMail />} tooltip={"Copy Email"} />
             </a>
             <p className="text-2xl">greg.pounds3@outlook.com</p>
           </div>

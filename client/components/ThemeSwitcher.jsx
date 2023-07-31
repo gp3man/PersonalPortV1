@@ -52,7 +52,7 @@ const ThemeController = () => {
     }
   };
   return (
-    <div className="">{theme === "dark" ? <SunIcon /> : <MoonIcon />}</div>
+    <div className="">{theme === "dark" ? <SunIcon tooltip={"Light Mode"}/> : <MoonIcon tooltip={"Dark Mode"}/>}</div>
   );
 };
 export default ThemeController;
