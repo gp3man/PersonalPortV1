@@ -29,7 +29,7 @@ const TechStack = () => {
       });
     }
     if (!inView) {
-      animation.start({ x: -200, opacity: 0});
+      animation.start({ x: -200, opacity: 0 });
     }
   }, [inView]);
   return (

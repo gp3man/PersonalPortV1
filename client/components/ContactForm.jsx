@@ -19,7 +19,7 @@ const ContactForm = () => {
       });
     }
     if (!inView) {
-      animation.start({ y: -200, opacity:0 });
+      animation.start({ y: -200, opacity: 0 });
     }
   }, [inView]);
   const onSubmitHandle = (evt) => {
@@ -63,7 +63,7 @@ const ContactForm = () => {
   useEffect(() => {
     setInterval(() => {
       setStatus("");
-    }, 15000);
+    }, 60000);
   });
   return (
     <motion.section
@@ -147,7 +147,7 @@ const ContactForm = () => {
           <div className="pb-8">
             <a onClick={copyNumber}>
               {" "}
-              <BarIcon icon={<AiFillPhone />} tooltip={"Copy Phone Number"}/>
+              <BarIcon icon={<AiFillPhone />} tooltip={"Copy Phone Number"} />
             </a>
             <p className="text-2xl">224-361-6080</p>
           </div>

@@ -9,15 +9,12 @@ import Profile from "./ProfileSideBar.jsx";
 const LandingPage = () => {
   return (
     <>
-      <div
-        // className="snap-y snap-mandatory overflow-x-hidden overflow-y-visible"
-        id="LandingPage"
-      >
+      <div id="LandingPage">
         <NavBar />
         <Profile />
         <TechStack />
-        <AboutMe />
         <Portfolio />
+        <AboutMe />
         <ContactForm />
       </div>
     </>

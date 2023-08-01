@@ -21,7 +21,9 @@ const Profile = () => {
         className="w-32 h-32 rounded-full animate- animate-bounce duration-300 space-x-4"
         src={Me6}
       />
-      <h1 className="text-4xl uppercase m-6 text-slate-50 font-bold">Gregory Pounds</h1>
+      <h1 className="text-4xl uppercase m-6 text-slate-50 font-bold">
+        Gregory Pounds
+      </h1>
       <h2 className="text-2xl uppercase bg-violet-500 dark:bg-violet-700 text-slate-50 rounded-full m-6 p-2">
         Software Developer
       </h2>

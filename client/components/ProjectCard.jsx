@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
+import { TbExternalLink } from "react-icons/tb";
+import { DiGithubFull } from "react-icons/di";
 import { HiMiniPhoto } from "react-icons/hi2";
+import BarIcon from "./BarIcon.jsx";
 const ProjectCard = ({ data }) => {
-  const { screenshots, summary, name, link } = data;
+  const { screenshots, summary, name, link, github } = data;
   const [currentIndex, setCurrentIndex] = useState(0);
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
@@ -52,13 +55,16 @@ const ProjectCard = ({ data }) => {
         </div>
         <div className="mobi:w-4/5 w-1/3 h-1/3 pl-10 flex-wrap text-right align-middle">
           <p>{summary}</p>
-          <a
-            className="italic align-text-bottom hover:text-blue-700 pt-10"
-            href={link}
-            target="new"
-          >
-            Go To Page
-          </a>
+          <div className="flex flex-row justify-evenly pt-14 left-10">
+            <a href={link} target="new">
+              <BarIcon icon={<TbExternalLink />} tooltip={`${link}`} />
+            </a>
+            {github ? (
+              <a href={link} target="new">
+                <BarIcon icon={<DiGithubFull />} tooltip={`${github}`} />
+              </a>
+            ) : null}
+          </div>
         </div>
       </div>
     </div>
