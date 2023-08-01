@@ -18,13 +18,13 @@ const Profile = () => {
       style={{ backgroundImage: `url(${I})` }}
     >
       <img
-        className="w-32 h-32 rounded-full animate- animate-bounce duration-300 space-x-4"
+        className="w-32 h-32 rounded-full animate- animate-bounce duration-300  space-x-4"
         src={Me6}
       />
-      <h1 className="text-4xl uppercase m-6 text-slate-50 font-bold">
+      <h1 className="text-4xl uppercase m-6 bg-gradient-to-t from-yellow-500 to-slate-100 bg-clip-text text-transparent shadow-2xl font-bold translate-y-5">
         Gregory Pounds
       </h1>
-      <h2 className="text-2xl uppercase bg-violet-500 dark:bg-violet-700 text-slate-50 rounded-full m-6 p-2">
+      <h2 className="text-2xl uppercase bg-violet-500 dark:bg-violet-700 text-slate-50 rounded-full m-6 p-2 shadow-3xl">
         Software Developer
       </h2>
 

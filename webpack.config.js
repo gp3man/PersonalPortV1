@@ -1,5 +1,5 @@
 module.exports = {
-  mode: "production",
+  mode: "development",
   entry: ["./client/index.jsx"],
   output: {
     path: __dirname + "/src",
