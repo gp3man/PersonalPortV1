@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
+import BarIcon from "../components/BarIcon.jsx";
 const ThemeController = () => {
   const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const userTheme = localStorage.getItem("theme");
@@ -15,17 +16,17 @@ const ThemeController = () => {
   //moon icon
   const MoonIcon = () => {
     return (
-      <div onClick={(evt) => handleClick(evt)} className={"bar-icon"}>
-        <MdDarkMode />
-      </div>
+      <a onClick={(evt) => handleClick(evt)}>
+        <BarIcon icon={<MdDarkMode />} tooltip={"Dark"} />
+      </a>
     );
   };
   //sun icon
   const SunIcon = () => {
     return (
-      <div onClick={(evt) => handleClick(evt)} className={"bar-icon"}>
-        <MdLightMode />
-      </div>
+      <a onClick={(evt) => handleClick(evt)}>
+        <BarIcon icon={<MdLightMode />} tooltip={"Light"} />
+      </a>
     );
   };
   //manual switch
@@ -52,7 +53,7 @@ const ThemeController = () => {
     }
   };
   return (
-    <div className="">{theme === "dark" ? <SunIcon /> : <MoonIcon />}</div>
+    <div className="pl-2">{theme === "dark" ? <SunIcon /> : <MoonIcon />}</div>
   );
 };
 export default ThemeController;

@@ -13,7 +13,7 @@ const Profile = () => {
   };
   return (
     <motion.section
-      className="flex flex-col min-h-screen m-1 pt-32 pb-14 content-center text-center items-center justify-items-center dark:text-slate-300 bg-cover bg-center bg-origin-border bg-fixed"
+      className="mobi:bg-cover bg-cover flex flex-col min-h-screen m-1 pt-32 pb-14 content-center text-center items-center justify-items-center dark:text-slate-300  bg-center bg-origin-border bg-fixed"
       id="Profile"
       style={{ backgroundImage: `url(${I})` }}
     >
@@ -21,7 +21,9 @@ const Profile = () => {
         className="w-32 h-32 rounded-full animate- animate-bounce duration-300 space-x-4"
         src={Me6}
       />
-      <h1 className="text-4xl uppercase m-6 text-slate-50 font-bold">Gregory Pounds</h1>
+      <h1 className="text-4xl uppercase m-6 text-slate-50 font-bold">
+        Gregory Pounds
+      </h1>
       <h2 className="text-2xl uppercase bg-violet-500 dark:bg-violet-700 text-slate-50 rounded-full m-6 p-2">
         Software Developer
       </h2>

@@ -22,19 +22,19 @@ const Portfolio = () => {
       });
     }
     if (!inView) {
-      animation.start({ x: -200, opacity: 0 });
+      animation.start({ x: 200, opacity: 0 });
     }
   }, [inView]);
   const projects = [
     {
       screenshots: [Shop1, Shop2, Shop3],
       summary:
-        "An e-commerce website for big and tall individuals. Demo( Username:admin, Pw: 123 )",
+        "An e-commerce website for big and tall individuals. To browse application, use (USR: admin, PWD: 123).",
       name: "Shop-A-Shaq",
       link: "https://graceshopperteam4.onrender.com/",
     },
     {
-      screenshots: [M1, M2, M3, M4],
+      screenshots: [M2, M3, M1, M4],
       summary: "A silly survival game, yes, you play as a cat.",
       name: "Mr. Meowgi",
       link: "https://mr-meowgi.onrender.com/",
@@ -47,12 +47,13 @@ const Portfolio = () => {
       className="page dark:text-slate-300 snap-start"
       id="Portfolio"
     >
-      <h1 className="uppercase text-4xl text-violet-600 m-6">Portfolio</h1>
+      <p className="uppercase text-4xl text-violet-600 m-6">Portfolio</p>
       <div className="h-[90%] w-[90%]">
         {projects.map((project, idx) => {
           return <ProjectCard data={project} key={idx} />;
         })}
       </div>
+      <p className="uppercase text-3xl italic pt-10 bg-gradient-to-r from-violet-500 to-blue-600 bg-clip-text text-transparent">For more info click on Portfolio tab.</p>
     </motion.section>
   );
 };
