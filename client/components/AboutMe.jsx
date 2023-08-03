@@ -16,7 +16,7 @@ const AboutMe = () => {
       });
     }
     if (!inView) {
-      animation.start({ x: -200, opacity: 0 });
+      animation.start({ x: -150, opacity: 0 });
     }
   }, [inView]);
   return (

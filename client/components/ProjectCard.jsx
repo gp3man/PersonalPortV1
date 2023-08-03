@@ -53,9 +53,9 @@ const ProjectCard = ({ data }) => {
             ))}
           </div>
         </div>
-        <div className="mobi:w-4/5 w-1/3 h-1/3 pl-10 flex-wrap text-right align-middle">
+        <div className="mobi:w-4/5 w-1/3 h-1/3 pt-6 pl-10 flex-wrap text-left align-middle">
           <p>{summary}</p>
-          <div className="flex flex-row justify-evenly pt-14 left-10">
+          <div className="flex flex-row justify-evenly pt-8 left-3">
             <a href={link} target="new">
               <BarIcon icon={<TbExternalLink />} tooltip={`${link}`} />
             </a>
@@ -63,7 +63,7 @@ const ProjectCard = ({ data }) => {
               <a href={link} target="new">
                 <BarIcon icon={<DiGithubFull />} tooltip={`${github}`} />
               </a>
-            ) : null}
+            ) : <div><div></div></div>}
           </div>
         </div>
       </div>

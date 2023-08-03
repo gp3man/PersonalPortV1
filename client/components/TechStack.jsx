@@ -29,7 +29,7 @@ const TechStack = () => {
       });
     }
     if (!inView) {
-      animation.start({ x: -200, opacity: 0 });
+      animation.start({ x: -150, opacity: 0 });
     }
   }, [inView]);
   return (
@@ -84,10 +84,10 @@ const TechStack = () => {
         </div>
       </div>
       <div className="relative -z-10">
-        <div className="absolute top-0 -left-4 w-32 h-32 bg-violet-600 rounded-full mix-blend-multiply blur-xl opacity-50 animate-blob animate-delay-2000"></div>
-        <div className="absolute top-0 -right-4 h-32 w-32 bg-blue-300 rounded-full mix-blend-multiply blur-xl opacity-50 animate-blob animate-delay-8000"></div>
-        <div className="absolute -bottom-8 left-4 h-32 w-32 bg-violet-800 rounded-full mix-blend-multiply blur-xl opacity-50 animate-blob animate-delay-4000"></div>
-        <div className="absolute -bottom-8 -right-4 w-32 h-32 bg-violet-400 rounded-full mix-blend-multiply blur-xl opacity-50 animate-blob animate-delay-6000"></div>
+        <div className="absolute top-0 -left-4 w-32 h-32 bg-violet-600 rounded-full mix-blend-multiply blur-xl opacity-30 animate-blob animate-delay-2000"></div>
+        <div className="absolute top-0 -right-4 h-32 w-32 bg-blue-300 rounded-full mix-blend-multiply blur-xl opacity-30 animate-blob animate-delay-8000"></div>
+        <div className="absolute -bottom-8 left-4 h-32 w-32 bg-violet-800 rounded-full mix-blend-multiply blur-xl opacity-30 animate-blob animate-delay-4000"></div>
+        <div className="absolute -bottom-8 -right-4 w-32 h-32 bg-violet-400 rounded-full mix-blend-multiply blur-xl opacity-30 animate-blob animate-delay-6000"></div>
       </div>
       <div className="flex flex-wrap text-xl text-left dark:text-slate-50 w-2/3 pt-14">
         <p>
