@@ -18,7 +18,7 @@ const Profile = () => {
       style={{ backgroundImage: `url(${I})` }}
     >
       <img
-        className="w-32 h-32 rounded-full animate- animate-bounce duration-300  space-x-4"
+        className="w-32 h-32 rounded-full animate- animate-bounce space-x-4 duration-1000"
         src={Me6}
       />
       <h1 className="text-4xl uppercase m-6 bg-gradient-to-t from-yellow-500 to-slate-100 bg-clip-text text-transparent shadow-2xl font-bold translate-y-5">
@@ -45,7 +45,7 @@ const Profile = () => {
       <p className="font-extralight text-slate-50 pt-16 text-xl">
         High level experience in web design and development knowledge.
       </p>
-      <div className="flex flex-col absolute bottom-20 text-slate-50 translate-y-full animate-pulse text-4xl">
+      <div className="flex flex-col absolute mobi:bottom-10 sm:bottom-20 text-slate-100 translate-y-full animate-pulse text-4xl">
         Scroll Down
         <BarIcon icon={<TbFoldDown size={120} />} />
       </div>

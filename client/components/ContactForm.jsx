@@ -93,7 +93,7 @@ const ContactForm = () => {
                 required
               />
               <label
-                className="absolute left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
+                className="absolute mobi:left-[25%] sm:left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
                 htmlFor="userName"
               >
                 Name
@@ -112,10 +112,10 @@ const ContactForm = () => {
                 required
               />
               <label
-                className="absolute left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
+                className="absolute mobi:left-[25%] sm:left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
                 htmlFor="email"
               >
-                Email address
+                Email
               </label>
             </div>
             <div className="relative">
@@ -130,10 +130,10 @@ const ContactForm = () => {
                 required
               />
               <label
-                className="absolute left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
+                className="absolute mobi:left-[25%] sm:left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
                 htmlFor="message"
               >
-                Message/Suggestions
+                Message
               </label>
             </div>
             <input
@@ -159,8 +159,8 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="relative -z-10">
-          <div className="absolute top-0 -left-4 w-32 h-32 bg-violet-600 rounded-full mix-blend-multiply blur-xl opacity-50 animate-blob animate-delay-2000"></div>
-          <div className="absolute top-0 -right-4 h-32 w-32 bg-blue-300 rounded-full mix-blend-multiply blur-xl opacity-50 animate-blob animate-delay-8000"></div>
+          <div className="absolute top-0 -left-4 w-32 h-32 bg-violet-600 rounded-full mix-blend-multiply blur-xl opacity-30 animate-blob animate-delay-2000"></div>
+          <div className="absolute top-0 -right-4 h-32 w-32 bg-blue-300 rounded-full mix-blend-multiply blur-xl opacity-30 animate-blob animate-delay-8000"></div>
           <div className="absolute -bottom-8 left-4 h-32 w-32 bg-violet-800 rounded-full mix-blend-multiply blur-xl opacity-50 animate-blob animate-delay-4000"></div>
           <div className="absolute -bottom-8 -right-4 w-32 h-32 bg-violet-400 rounded-full mix-blend-multiply blur-xl opacity-50 animate-blob animate-delay-6000"></div>
         </div>
