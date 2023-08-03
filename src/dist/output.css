@@ -795,8 +795,8 @@ video {
   width: 20%;
 }
 
-.w-\[33vw\] {
-  width: 33vw;
+.w-\[40vw\] {
+  width: 40vw;
 }
 
 .w-\[88\%\] {
@@ -1573,8 +1573,8 @@ video {
     bottom: 2.5rem;
   }
 
-  .mobi\:left-\[25\%\] {
-    left: 25%;
+  .mobi\:left-\[35\%\] {
+    left: 35%;
   }
 
   .mobi\:flex {
@@ -1612,10 +1612,6 @@ video {
     bottom: 5rem;
   }
 
-  .sm\:left-3 {
-    left: 0.75rem;
-  }
-
   .sm\:float-right {
     float: right;
   }
@@ -1631,6 +1627,10 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:left-3 {
+    left: 0.75rem;
+  }
+
   .md\:min-w-\[500px\] {
     min-width: 500px;
   }

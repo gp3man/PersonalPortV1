@@ -83,7 +83,7 @@ const ContactForm = () => {
           <form onSubmit={onSubmitHandle}>
             <div className="relative mt-12">
               <input
-                className="peer relative -top-3.5 m-6 w-[33vw] rounded-md border-b-2 border-slate-900 focus: outline-none focus:border-violet-600 dark:focus:border-blue-600 placeholder-transparent"
+                className="peer relative -top-3.5 m-6 w-[40vw] rounded-md border-b-2 border-slate-900 focus: outline-none focus:border-violet-600 dark:focus:border-blue-600 placeholder-transparent"
                 type="text"
                 name="userName"
                 id="userName"
@@ -93,7 +93,7 @@ const ContactForm = () => {
                 required
               />
               <label
-                className="absolute mobi:left-[25%] sm:left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
+                className="absolute mobi:left-[35%] md:left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
                 htmlFor="userName"
               >
                 Name
@@ -101,7 +101,7 @@ const ContactForm = () => {
             </div>
             <div className="relative">
               <input
-                className="peer relative -top-3.5 m-6 w-[33vw] rounded-md border-b-2 border-slate-900 focus:outline-none focus:border-violet-600
+                className="peer relative -top-3.5 m-6 w-[40vw] rounded-md border-b-2 border-slate-900 focus:outline-none focus:border-violet-600
           dark:focus:border-blue-600 placeholder-transparent"
                 type="email"
                 name="email"
@@ -112,7 +112,7 @@ const ContactForm = () => {
                 required
               />
               <label
-                className="absolute mobi:left-[25%] sm:left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
+                className="absolute mobi:left-[35%] md:left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
                 htmlFor="email"
               >
                 Email
@@ -120,7 +120,7 @@ const ContactForm = () => {
             </div>
             <div className="relative">
               <textarea
-                className="peer relative -top-3.5 m-6 w-[33vw] h-12 rounded-md border-b-2 border-slate-900 focus:outline-none focus:border-violet-600 dark:focus:border-blue-600 placeholder-transparent"
+                className="peer relative -top-3.5 m-6 w-[40vw] h-12 rounded-md border-b-2 border-slate-900 focus:outline-none focus:border-violet-600 dark:focus:border-blue-600 placeholder-transparent"
                 type="text"
                 name="message"
                 id="message"
@@ -130,7 +130,7 @@ const ContactForm = () => {
                 required
               />
               <label
-                className="absolute mobi:left-[25%] sm:left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
+                className="absolute mobi:left-[35%] md:left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
                 htmlFor="message"
               >
                 Message
