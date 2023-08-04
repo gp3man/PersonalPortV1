@@ -8,7 +8,7 @@ import Me1 from "../../src/assets/Mymeme1.png";
 
 const ContactForm = () => {
   const animation = useAnimation();
-  const { ref, inView } = useInView({ threshold: 0.3 });
+  const { ref, inView } = useInView({ threshold: 0.1 });
   useEffect(() => {
     // console.log("ContactPage, inView =", inView);
     if (inView) {

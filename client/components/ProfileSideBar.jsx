@@ -1,19 +1,17 @@
 import React from "react";
-import { motion, useAnimation } from "framer-motion";
 import { ImGithub, ImLinkedin } from "react-icons/im";
 import { TbFoldDown } from "react-icons/tb";
 import BarIcon from "./BarIcon.jsx";
 import Me6 from "../../src/assets/Mymeme6.png";
 import I from "../../src/assets/img2.jpg";
 const Profile = () => {
-  const animation = useAnimation();
   const handleScroll = (evt) => {
     evt.preventDefault();
     window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   };
   return (
-    <motion.section
-      className="mobi:bg-cover bg-cover flex flex-col min-h-screen m-1 pt-32 pb-14 content-center text-center items-center justify-items-center dark:text-slate-300  bg-center bg-origin-border bg-fixed"
+    <section
+      className="mobi:bg-cover flex flex-col min-h-screen m-1 pt-32 pb-14 content-center text-center items-center justify-items-center dark:text-slate-300 bg-center bg-origin-border bg-fixed"
       id="Profile"
       style={{ backgroundImage: `url(${I})` }}
     >
@@ -49,7 +47,7 @@ const Profile = () => {
         Scroll Down
         <BarIcon icon={<TbFoldDown size={120} />} />
       </div>
-    </motion.section>
+    </section>
   );
 };
 export default Profile;
