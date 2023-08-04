@@ -11,7 +11,7 @@ import Shop2 from "../../src/assets/Shop-A-Shaq2.PNG";
 import Shop3 from "../../src/assets/Shop-A-Shaq3.PNG";
 const Portfolio = () => {
   const animation = useAnimation();
-  const { ref, inView } = useInView({ threshold: 0.3 });
+  const { ref, inView } = useInView({ threshold: 0.1 });
   useEffect(() => {
     // console.log("PortPage, inView =", inView);
     if (inView) {
@@ -44,7 +44,7 @@ const Portfolio = () => {
     <motion.section
       ref={ref}
       animate={animation}
-      className="page dark:text-slate-300 snap-start"
+      className="page dark:text-slate-300"
       id="Portfolio"
     >
       <p className="uppercase text-4xl text-violet-600 m-6">Portfolio</p>

@@ -8,7 +8,7 @@ import Me1 from "../../src/assets/Mymeme1.png";
 
 const ContactForm = () => {
   const animation = useAnimation();
-  const { ref, inView } = useInView({ threshold: 0.3 });
+  const { ref, inView } = useInView({ threshold: 0.1 });
   useEffect(() => {
     // console.log("ContactPage, inView =", inView);
     if (inView) {
@@ -69,7 +69,7 @@ const ContactForm = () => {
     <motion.section
       ref={ref}
       animate={animation}
-      className="page"
+      className="page overflow-y-hidden"
       id="contactForm"
     >
       <h1 className="uppercase text-4xl text-violet-600 m-6">Contact Me</h1>
@@ -93,7 +93,7 @@ const ContactForm = () => {
                 required
               />
               <label
-                className="absolute mobi:left-[35%] md:left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
+                className="absolute mobi:left-[36%] md:left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
                 htmlFor="userName"
               >
                 Name
@@ -112,7 +112,7 @@ const ContactForm = () => {
                 required
               />
               <label
-                className="absolute mobi:left-[35%] md:left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
+                className="absolute mobi:left-[36%] md:left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
                 htmlFor="email"
               >
                 Email
@@ -130,7 +130,7 @@ const ContactForm = () => {
                 required
               />
               <label
-                className="absolute mobi:left-[35%] md:left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
+                className="absolute mobi:left-[36%] md:left-3 -top-3 mx-3 text-slate-950 dark:text-slate-50 text-sm transition-all peer-placeholder-shown:text-slate-600 peer-placeholder-shown:text-base peer-placeholder-shown:top-2 peer-placeholder-shown:uppercase peer-focus:-top-3.5 peer-focus:text-slate-950 dark:peer-focus:text-slate-50 peer-focus:text-sm"
                 htmlFor="message"
               >
                 Message
