@@ -9,6 +9,10 @@ import M4 from "../../src/assets/Mr-m4.PNG";
 import Shop1 from "../../src/assets/Shop-A-Shaq1.PNG";
 import Shop2 from "../../src/assets/Shop-A-Shaq2.PNG";
 import Shop3 from "../../src/assets/Shop-A-Shaq3.PNG";
+import Spot1 from "../../src/assets/Spotify1.PNG";
+import Spot2 from "../../src/assets/Spotify2.PNG";
+import Spot3 from "../../src/assets/Spotify3.PNG";
+
 const Portfolio = () => {
   const animation = useAnimation();
   const { ref, inView } = useInView({ threshold: 0.1 });
@@ -26,6 +30,13 @@ const Portfolio = () => {
     }
   }, [inView]);
   const projects = [
+    {
+      screenshots: [Spot1, Spot2, Spot3],
+      summary:
+        "A Spotify Api project built with Next.js. Login with Spotify.",
+      name: "Share Jams V2",
+      link: "https://share-jams-next.vercel.app/",
+    },
     {
       screenshots: [Shop1, Shop2, Shop3],
       summary:

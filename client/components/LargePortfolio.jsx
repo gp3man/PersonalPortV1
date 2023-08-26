@@ -8,8 +8,19 @@ import Shop1 from "../../src/assets/Shop-A-Shaq1.PNG";
 import Shop2 from "../../src/assets/Shop-A-Shaq2.PNG";
 import Shop3 from "../../src/assets/Shop-A-Shaq3.PNG";
 import NavBar from "./NavBar.jsx";
+import Spot1 from "../../src/assets/Spotify1.PNG";
+import Spot2 from "../../src/assets/Spotify2.PNG";
+import Spot3 from "../../src/assets/Spotify3.PNG";
 const LargePortfolio = () => {
   const projects = [
+    {
+      screenshots: [Spot1, Spot2, Spot3],
+      summary:
+        "A Spotify Api project built with Next.js. Currently with the nature of the Api this app is not fully functional if you do not have Spotify premium. This was a solo project. I plan to add more features such as the search option, as well as a karaoke tab so that you can sing your heart out with friends and family. Login with Spotify.",
+      name: "Share Jams V2",
+      link: "https://share-jams-next.vercel.app/",
+      github: "https://github.com/gp3man/share_jams_next",
+    },
     {
       screenshots: [Shop1, Shop2, Shop3],
       summary:
