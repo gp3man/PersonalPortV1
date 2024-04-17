@@ -57,7 +57,7 @@ const PhotoCard = () => {
         <div>
           <div className="mobi:min-w-[300px] md:min-w-[500px] lg:min-w-[800px] xl:min-w-[1000px] lg:min-h-[600px]  mobi:min-h-[300px] w-full m-auto py-16 px-4 relative group">
             <div
-              style={{ backgroundImage: `url(${photos[currentIndex]})` }}
+              style={{ backgroundImage: `-webkit-image-set(url(${photos[currentIndex]}) .5x, url(${photos[currentIndex]}) 1x, url(${photos[currentIndex]}) 2x)` }}
               className="absolute top-0 left-0 w-full h-full rounded-2xl bg-center bg-cover duration-500"
             ></div>
             <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-slate-50 cursor-pointer">

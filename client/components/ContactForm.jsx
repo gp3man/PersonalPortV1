@@ -79,7 +79,7 @@ const ContactForm = () => {
       </p>
       {status && renderAlert()}
       <div className=" mobi:flex mobi:flex-col md:flex-row float-left">
-        <div className="shadow-md shadow-violet-500 pb-7 float-left">
+        <div className="shadow-md shadow-violet-500 pb-7 float-left rounded-b-lg">
           <form onSubmit={onSubmitHandle}>
             <div className="relative mt-12">
               <input

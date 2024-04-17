@@ -13,17 +13,18 @@ const Profile = () => {
     <section
       className="mobi:bg-cover flex flex-col min-h-screen m-1 pt-32 pb-14 content-center text-center items-center justify-items-center dark:text-slate-300 bg-center bg-origin-border bg-fixed"
       id="Profile"
-      style={{ backgroundImage: `url(${I})` }}
+      style={{ backgroundImage: `-webkit-image-set(url(${I}) 1x, url(${I}) 2x)` }}
     >
       <img
         className="w-32 h-32 rounded-full animate- animate-bounce space-x-4 duration-1000"
+        srcSet=""
         src={Me6}
       />
       <h1 className="mobi:text-2xl sm:text-4xl uppercase m-6 bg-gradient-to-t from-yellow-500 to-slate-100 bg-clip-text text-transparent shadow-2xl font-bold translate-y-5">
         Gregory Pounds
       </h1>
       <h2 className="mobi:text-md sm:text-2xl uppercase bg-violet-500 dark:bg-violet-700 text-slate-50 rounded-full m-6 p-2 shadow-3xl">
-        Software Developer
+        Software Engineer
       </h2>
 
       <div className="flex content-evenly pt-2">
@@ -41,10 +42,10 @@ const Profile = () => {
         Contact
       </button>
       <p className="font-extralight text-slate-50 mobi:pt-3 sm:pt-16 mobi:px-3 text-xl">
-        High level experience in web design and development knowledge.
+        High level experience in development and operational knowledge.
       </p>
       <div className="flex flex-col absolute mobi:bottom-10 sm:bottom-20 p-1 m-1 text-yellow-500 translate-y-full animate-pulse text-4xl">
-        Scroll Down
+        See More
         <BarIcon icon={<TbFoldDown size={120} />} />
       </div>
     </section>

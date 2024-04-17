@@ -27,7 +27,7 @@ const AboutMe = () => {
       id="AboutMe"
     >
       <h1 className="uppercase text-4xl text-violet-600 m-6">About Me</h1>
-      <img className="w-24 h-24 rounded-full" src={Greg} />
+      <img className="w-24 h-24 rounded-full" src={Greg}  />
       <p className="text-2xl text-left dark:text-slate-50 w-[88%] pt-14 font-extralight italic">
         Prior to my pivot into the tech industry I was immersed in the ups and
         down of being a retail/warehouse manager. After bumping my head, going
